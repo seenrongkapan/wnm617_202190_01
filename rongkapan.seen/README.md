@@ -3,7 +3,7 @@
 ## Important Links
 
 - http://seenmydesign.com
-- https://seenmydesign.com/aau/wnm617/rongkapan.seen/
+- http://seenmydesign.com/aau/wnm617/rongkapan.seen/
 
 ## Perhaps Some Notes
 
