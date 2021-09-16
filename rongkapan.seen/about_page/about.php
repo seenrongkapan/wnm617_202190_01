@@ -37,7 +37,7 @@
 
 	        <div class="col-xs-12 col-md-5">
 	        		<p style="padding-top: 0.85em;">My name is Seen Rongkapan. I was born and raised in Bangkok, Thailand and decided to move to San Francisco in 2012 to study and pursue design.</p>
-	        		<p>I've been working as designer for big and small companies in <br>the Bay Area for the past 4 years. Cenrrently I am working as a part-time visual designer at Postmates by Uber along side with persuing MA in Web Design and New Media at Academy of Art University in San Francisco.</p>
+	        		<p>I've been working as designer for big and small companies in <br>the Bay Area for the past 4 years. Currently I am working as a part-time visual designer at Postmates by Uber along side with persuing MA in Web Design and New Media at Academy of Art University in San Francisco.</p>
 	        </div>
 	        	
 	    </div>
