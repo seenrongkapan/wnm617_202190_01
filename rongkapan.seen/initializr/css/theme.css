@@ -1,3 +1,23 @@
+.title {
+	font-size: 7em;
+	text-transform: uppercase;
+}
+
+nav {
+	position: fixed;
+}
+
+nav a {
+	font-size: 1.2em;
+	text-transform: capitalize;
+	margin-top: 20px;
+}
+
 nav li:nth-child(2) a{
 	background: blue;
+}
+
+footer {
+	background: #3443eb;
+	text-align: center;
 }

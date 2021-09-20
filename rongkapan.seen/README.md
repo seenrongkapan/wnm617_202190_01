@@ -5,6 +5,13 @@
 - http://seenmydesign.com
 - http://seenmydesign.com/aau/wnm617/rongkapan.seen/
 
+## Side Asignments
+
+- http://seenmydesign.com/aau/wnm617/rongkapan.seen/about_page/
+
+- http://seenmydesign.com/aau/wnm617/rongkapan.seen/initializr/
+
+
 ## Perhaps Some Notes
 
 - Learn some more about markdown language
