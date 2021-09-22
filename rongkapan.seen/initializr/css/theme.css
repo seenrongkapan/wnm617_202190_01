@@ -1,23 +1,39 @@
+body {
+	background-image: url(.../img/tahoe.jpg);
+	background: paleturquoise;
+	/*background-repeat: no-repeat;
+*/}
 .title {
 	font-size: 7em;
 	text-transform: uppercase;
 }
 
-nav {
-	position: fixed;
+.header-container {
+	background: darkgrey;
+    border-bottom: none;
 }
 
 nav a {
 	font-size: 1.2em;
 	text-transform: capitalize;
 	margin-top: 20px;
+	flex: none;
 }
 
 nav li:nth-child(2) a{
-	background: blue;
+	background: black;
+	border-radius: 15px;
+}
+
+nav li a:hover {
+	box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);;
 }
 
 footer {
-	background: #3443eb;
+	/*background: #3443eb;*/
 	text-align: center;
+}
+
+.footer-container {
+	background: skyblue;
 }
