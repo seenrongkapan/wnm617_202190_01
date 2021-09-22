@@ -1,23 +1,34 @@
 body {
-	background-image: url(.../img/tahoe.jpg);
+	background-image: url("../img/tahoe.jpg");
 	background: paleturquoise;
+	margin: 0;
 	/*background-repeat: no-repeat;
 */}
 .title {
 	font-size: 7em;
 	text-transform: uppercase;
+	z-index: 0;
 }
 
 .header-container {
-	background: darkgrey;
-    border-bottom: none;
+	background: paleturquoise;
+    border-bottom: 2px double darkblue;
+    box-shadow: none;
+}
+
+.wrapper {
+	width: 92%;
 }
 
 nav a {
 	font-size: 1.2em;
 	text-transform: capitalize;
 	margin-top: 20px;
-	flex: none;
+}
+
+nav li:first-child a {
+        background: none;
+        border-bottom: 1px solid black;
 }
 
 nav li:nth-child(2) a{
@@ -29,6 +40,14 @@ nav li a:hover {
 	box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);;
 }
 
+section {
+	border-bottom: 1.2px dotted darkblue;
+}
+
+aside {
+	background-image: url("../img/tahoe.jpg");
+}
+
 footer {
 	/*background: #3443eb;*/
 	text-align: center;
@@ -36,4 +55,9 @@ footer {
 
 .footer-container {
 	background: skyblue;
+	border: none;
+	/*got this shadows from the main.css*/
+	 -webkit-box-shadow: 0 15px 5px #aaa;
+           -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa;
 }
