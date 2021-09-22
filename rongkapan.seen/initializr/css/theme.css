@@ -1,13 +1,13 @@
 body {
-	background-image: url("../img/tahoe.jpg");
 	background: paleturquoise;
-	margin: 0;
-	/*background-repeat: no-repeat;
-*/}
+	background-image: url("../img/mario.png");
+	margin: auto 0;
+	background-repeat: no-repeat;
+	
+}
 .title {
 	font-size: 7em;
 	text-transform: uppercase;
-	z-index: 0;
 }
 
 .header-container {
@@ -16,14 +16,22 @@ body {
     box-shadow: none;
 }
 
-.wrapper {
-	width: 92%;
+.main-container {
+	margin: auto;
+	width: 90%;
+	background: rgba(255, 255, 255, 0.5);
 }
+/*.wrapper {
+	width: 92%;
+	
+}*/
 
-nav a {
+nav a { 
 	font-size: 1.2em;
 	text-transform: capitalize;
 	margin-top: 20px;
+	padding-left: 2px;
+	padding-right: 2px;
 }
 
 nav li:first-child a {
@@ -36,21 +44,87 @@ nav li:nth-child(2) a{
 	border-radius: 15px;
 }
 
+nav li:last-child a{
+	background: none;
+	border: 1.25px black solid;
+	border-radius: 15px;
+}
+
 nav li a:hover {
 	box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, .2);;
 }
 
 section {
 	border-bottom: 1.2px dotted darkblue;
+	width: 40%;
+	margin-top: 15px;
+
 }
 
-aside {
-	background-image: url("../img/tahoe.jpg");
+article section h2 {
+	text-decoration: line-through;
 }
 
-footer {
+.main aside {
+	float: none;
+	order: 1;
+	background-color: white;
+	color: darkblue;
+	margin: auto;
+	margin-top: 20px;
+	border-top: 5px solid gray;
+	border-bottom: 5px solid gray;
+	width: 45%;
+}
+
+.main aside:hover {
+	border-radius: 25px;
+}
+
+aside h3 {
+	text-transform: uppercase;
+	text-align: center;
+	font-size: 3.25em;
+}
+
+aside p:hover {
+	text-decoration: underline;
+	color: black;
+}
+
+.main article {
+	float: none;
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	width: 100%;
+	order: 2;
+	border-bottom: 15px solid darkblue;
+	padding-bottom: 10px;
+}
+
+article>header {
+	border: 2px solid darkblue;
+	border-radius: 25px;
+	padding-left: 25px;
+}
+
+article>header:hover {
+	box-shadow: 0 5px 5px rgba(0, 0, 0, 0.25);
+	transition: transform .2s;
+	transform: scale(1.1);
+	text-align: center;
+	background: wheat;
+}
+
+article footer {
+	width: 80%;
+}
+
+.footer-container>footer {
 	/*background: #3443eb;*/
 	text-align: center;
+	font-size: 5em;
 }
 
 .footer-container {
