@@ -1,4 +1,4 @@
-# Seen Rongkapan
+ss# Seen Rongkapan
 
 ## Important Links
 
@@ -8,8 +8,11 @@
 ## Side Asignments
 
 - http://seenmydesign.com/aau/wnm617/rongkapan.seen/about_page/
-
 - http://seenmydesign.com/aau/wnm617/rongkapan.seen/initializr/
+
+## Demo Code
+
+- http://seenmydesign.com/aau/wnm617/rongkapan.seen/demo/jquery.html/
 
 
 ## Perhaps Some Notes
