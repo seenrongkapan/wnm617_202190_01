@@ -48,12 +48,79 @@
 					<hr>
 					<p style="text-align: center; font-size: 0.85em;">
 						Don't have an account yet?  
-						<a href="#page-forgot-password" style="font-weight: 400; text-decoration: underline;">Sign Up</a>
+						<a href="#page-signup" style="font-weight: 400; text-decoration: underline;">Sign Up</a>
 					</p>
 				</div>
 			</form>
 
 
+		</div>
+	</section>
+
+	<!-- Sign Up -->
+	<section data-role="page" id="page-signup">
+		<div data-role="main" class="display-flex flex-vertical">
+			<div class="flex-stretch"></div>
+			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+
+				<div class="form-control">
+					<input class="form-input" type="text" id="signup-first-name" data-role="none" placeholder="First Name">
+				</div>
+
+				<div class="form-control">
+					<input class="form-input" type="text" id="signup-last-name" data-role="none" placeholder="Last Name">
+				</div>
+
+				<div class="form-control">
+					<input class="form-input" type="text" id="signup-email" data-role="none" placeholder="E-mail">
+				</div>
+
+				<div class="form-control">
+					<input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Username">
+				</div> 
+
+				<div class="form-control">
+					<input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Password">
+				</div>
+
+				<div class="form-control">
+					<a href="#page-onboarding-1" class="form-button">Sign Up</a>
+				</div>
+
+				<div class="form-control">
+					
+					<p style="text-align: center; font-size: 0.85em;">
+						Already have an account?  
+						<a href="#page-signin" style="font-weight: 400; text-decoration: underline;">Sign In</a>
+					</p>
+				</div>
+			</form>
+
+
+		</div>
+	</section>
+
+	<!-- Onboarding 1 -->
+	<section data-role="page" id="page-onboarding-1">
+		<div data-role="main" class="display-flex flex-vertical">
+			<div class="flex-stretch"></div>
+			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+				<div class="form-control">
+					<a href="#page-onboarding-2" class="form-button">Next</a>
+				</div>
+			</form>
+		</div>
+	</section>
+
+	<!-- Onboarding 2 -->
+	<section data-role="page" id="page-onboarding-2">
+		<div data-role="main" class="display-flex flex-vertical">
+			<div class="flex-stretch"></div>
+			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+				<div class="form-control">
+					<a href="#page-map" class="form-button">Done</a>
+				</div>
+			</form>
 		</div>
 	</section>
 
@@ -66,6 +133,7 @@
 		<footer data-role="footer">
 			<ul>
 				<li><a href="#page-recent">Recent</a></li>
+				<li><a href="#page-map">Map</a></li>
 				<li><a href="#page-list">List</a></li>
 				<li><a href="#page-user-profile">Profile</a></li>
 			</ul>
@@ -76,16 +144,16 @@
 	<section data-role="page" id="page-list"> 
 		<div data-role="main">
 			<ul>
-				<li><a href="#page-animal-profile">Animal 1</a></li>
-				<li><a href="#page-animal-profile">Animal 2</a></li>
-				<li><a href="#page-animal-profile">Animal 3</a></li>
-				<li><a href="#page-animal-profile">Animal 4</a></li>
-				<li><a href="#page-animal-profile">Animal 5</a></li>
-				<li><a href="#page-animal-profile">Animal 6</a></li>
-				<li><a href="#page-animal-profile">Animal 7</a></li>
-				<li><a href="#page-animal-profile">Animal 8</a></li>
-				<li><a href="#page-animal-profile">Animal 9</a></li>
-				<li><a href="#page-animal-profile">Animal 10</a></li>
+				<li><a href="#page-animal-profile">Doggy 1</a></li>
+				<li><a href="#page-animal-profile">Doggy 2</a></li>
+				<li><a href="#page-animal-profile">Doggy 3</a></li>
+				<li><a href="#page-animal-profile">Doggy 4</a></li>
+				<li><a href="#page-animal-profile">Doggy 5</a></li>
+				<li><a href="#page-animal-profile">Doggy 6</a></li>
+				<li><a href="#page-animal-profile">Doggy 7</a></li>
+				<li><a href="#page-animal-profile">Doggy 8</a></li>
+				<li><a href="#page-animal-profile">Doggy 9</a></li>
+				<li><a href="#page-animal-profile">Doggy 10</a></li>
 			</ul>
 		</div>
 
