@@ -105,6 +105,7 @@
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
 			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+
 				<div class="form-control">
 					<a href="#page-onboarding-2" class="form-button">Next</a>
 				</div>
@@ -128,6 +129,11 @@
 	<section data-role="page" id="page-map">
 		<div data-role="main">
 			Map!
+			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+				<div class="form-control">
+					<a href="#page-add-new" class="form-button">Add New</a>
+				</div>
+			</form>
 		</div>
 
 		<footer data-role="footer">
@@ -139,6 +145,8 @@
 			</ul>
 		</footer>
 	</section>
+
+
 
 	<!-- List -->
 	<section data-role="page" id="page-list"> 
@@ -160,6 +168,7 @@
 		<footer data-role="footer">
 			<ul>
 				<li><a href="#page-recent">Recent</a></li>
+				<li><a href="#page-map">Map</a></li>
 				<li><a href="#page-list">List</a></li>
 				<li><a href="#page-user-profile">Profile</a></li>
 			</ul>
@@ -170,15 +179,34 @@
 	<section data-role="page" id="page-user-profile"> 
 		<div data-role="main">
 			User!
+			<div class="flex-stretch"></div>
+			<form data-ajax="false" class="form" id="edit-profile" style="padding:10px;">
+				<div class="form-control">
+					<a href="#page-edit-profile" class="form-button">Edit Profile</a>
+				</div>
+			</form>
 		</div>
 
 		<footer data-role="footer">
 			<ul>
 				<li><a href="#page-recent">Recent</a></li>
+				<li><a href="#page-map">Map</a></li>
 				<li><a href="#page-list">List</a></li>
 				<li><a href="#page-user-profile">Profile</a></li>
 			</ul>
 		</footer>
+	</section>
+
+	<!-- Edit Profile -->
+	<section data-role="page" id="page-edit-profile">
+		<div data-role="main" class="display-flex flex-vertical">
+			<div class="flex-stretch"></div>
+			<form data-ajax="false" class="form" id="edit-profile" style="padding:10px;">
+				<div class="form-control">
+					<a href="#page-map" class="form-button">Edit Profile</a>
+				</div>
+			</form>
+		</div>
 	</section>
 
 	<!-- Animal Profile -->
@@ -194,6 +222,32 @@
 			Animal
 		</div>
 
+	</section>
+
+	<!-- Add New -->
+	<section data-role="page" id="page-add-new">
+		<header data-role="header">
+			<h1>Add New Doggy</h1>
+
+			<ul>
+				<li><a href="#" data-rel="back"> Back </a></li>
+			</ul>
+		</header>
+		<div data-role="main" class="display-flex flex-vertical">
+			Add New Doggy
+			<div class="flex-stretch"></div>
+			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+				<div class="form-control">
+					<input class="form-input" type="text" id="doggy-name" data-role="none" placeholder="Doggy Name">
+				</div>
+				<div class="form-control">
+					<input class="form-input" type="text" id="doggy-info" data-role="none" placeholder="Doggy Info">
+				</div>
+				<div class="form-control">
+					<a href="#page-map" class="form-button">Done</a>
+				</div>
+			</form>
+		</div>
 	</section>
 	
 </body>
