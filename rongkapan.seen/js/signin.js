@@ -1,8 +1,8 @@
 
 
 const checkSigninForm = () => {
-	let user = $("signin-username").val();
-	let pass = $("signin-password").val();
+	let user = $("#signin-username").val();
+	let pass = $("#signin-password").val();
 
 	console.log(user,pass);
 
