@@ -18,6 +18,7 @@
 	<script src="lib/js/jquery-2.2.4.min.js"></script>
 
 	<script src="js/app.js"></script>
+	<script src="js/signin.js"></script>
 
 	<script src="lib/js/jquery.mobile-1.4.5.min.js"></script>
 </head>
@@ -38,7 +39,7 @@
 				</div>
 
 				<div class="form-control">
-					<a href="#page-map" class="form-button">Sign In</a>
+					<input type="submit" value="Sign In" class="form-button">
 				</div>
 
 				<div class="form-control">
@@ -72,19 +73,26 @@
 				</div>
 
 				<div class="form-control">
+					<label for="signup-email" class="form-label">Email Address</label>
 					<input class="form-input" type="text" id="signup-email" data-role="none" placeholder="E-mail">
 				</div>
 
 				<div class="form-control">
+					<label for="signup-username" class="form-label">Username</label>
 					<input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Username">
 				</div> 
 
 				<div class="form-control">
+					<label for="signup-password" class="form-label">Password</label>
 					<input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Password">
 				</div>
 
 				<div class="form-control">
-					<a href="#page-onboarding-1" class="form-button">Sign Up</a>
+					<input class="form-input" type="password" id="signup-password-2" data-role="none" placeholder="Confirm Password">
+				</div>
+
+				<div class="form-control">
+					<input type="submit" value="Sign Up" class="form-button">
 				</div>
 
 				<div class="form-control">
@@ -96,6 +104,7 @@
 				</div>
 			</form>
 
+			<div class="flex-stretch"></div>
 
 		</div>
 	</section>
@@ -104,7 +113,7 @@
 	<section data-role="page" id="page-onboarding-1">
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+			<form data-ajax="false" class="form" id="onboarding-1" style="padding:10px;">
 
 				<div class="form-control">
 					<a href="#page-onboarding-2" class="form-button">Next</a>
@@ -117,7 +126,7 @@
 	<section data-role="page" id="page-onboarding-2">
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+			<form data-ajax="false" class="form" id="onboarding-2" style="padding:10px;">
 				<div class="form-control">
 					<a href="#page-map" class="form-button">Done</a>
 				</div>
@@ -129,11 +138,10 @@
 	<section data-role="page" id="page-map">
 		<div data-role="main">
 			Map!
-			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
-				<div class="form-control">
-					<a href="#page-add-new" class="form-button">Add New</a>
-				</div>
-			</form>
+			<div class="map">
+				
+			</div>
+		
 		</div>
 
 		<footer data-role="footer">
@@ -150,19 +158,63 @@
 
 	<!-- List -->
 	<section data-role="page" id="page-list"> 
-		<div data-role="main">
-			<ul>
-				<li><a href="#page-animal-profile">Doggy 1</a></li>
-				<li><a href="#page-animal-profile">Doggy 2</a></li>
-				<li><a href="#page-animal-profile">Doggy 3</a></li>
-				<li><a href="#page-animal-profile">Doggy 4</a></li>
-				<li><a href="#page-animal-profile">Doggy 5</a></li>
-				<li><a href="#page-animal-profile">Doggy 6</a></li>
-				<li><a href="#page-animal-profile">Doggy 7</a></li>
-				<li><a href="#page-animal-profile">Doggy 8</a></li>
-				<li><a href="#page-animal-profile">Doggy 9</a></li>
-				<li><a href="#page-animal-profile">Doggy 10</a></li>
-			</ul>
+		<div data-role="main" class="overscroll">
+				<ul>
+					<li><a href="#page-animal-profile">Doggy 1</a></li>
+					<li><a href="#page-animal-profile">Doggy 2</a></li>
+					<li><a href="#page-animal-profile">Doggy 3</a></li>
+					<li><a href="#page-animal-profile">Doggy 4</a></li>
+					<li><a href="#page-animal-profile">Doggy 5</a></li>
+					<li><a href="#page-animal-profile">Doggy 6</a></li>
+					<li><a href="#page-animal-profile">Doggy 7</a></li>
+					<li><a href="#page-animal-profile">Doggy 8</a></li>
+					<li><a href="#page-animal-profile">Doggy 9</a></li>
+					<li><a href="#page-animal-profile">Doggy 10</a></li>
+					<li><a href="#page-animal-profile">Doggy 11</a></li>
+					<li><a href="#page-animal-profile">Doggy 12</a></li>
+					<li><a href="#page-animal-profile">Doggy 13</a></li>
+					<li><a href="#page-animal-profile">Doggy 14</a></li>
+					<li><a href="#page-animal-profile">Doggy 15</a></li>
+					<li><a href="#page-animal-profile">Doggy 16</a></li>
+					<li><a href="#page-animal-profile">Doggy 17</a></li>
+					<li><a href="#page-animal-profile">Doggy 18</a></li>
+					<li><a href="#page-animal-profile">Doggy 19</a></li>
+					<li><a href="#page-animal-profile">Doggy 20</a></li>
+					<li><a href="#page-animal-profile">Doggy 21</a></li>
+					<li><a href="#page-animal-profile">Doggy 22</a></li>
+					<li><a href="#page-animal-profile">Doggy 23</a></li>
+					<li><a href="#page-animal-profile">Doggy 24</a></li>
+					<li><a href="#page-animal-profile">Doggy 25</a></li>
+					<li><a href="#page-animal-profile">Doggy 26</a></li>
+					<li><a href="#page-animal-profile">Doggy 27</a></li>
+					<li><a href="#page-animal-profile">Doggy 28</a></li>
+					<li><a href="#page-animal-profile">Doggy 29</a></li>
+					<li><a href="#page-animal-profile">Doggy 30</a></li>
+					<li><a href="#page-animal-profile">Doggy 31</a></li>
+					<li><a href="#page-animal-profile">Doggy 32</a></li>
+					<li><a href="#page-animal-profile">Doggy 33</a></li>
+					<li><a href="#page-animal-profile">Doggy 34</a></li>
+					<li><a href="#page-animal-profile">Doggy 35</a></li>
+					<li><a href="#page-animal-profile">Doggy 36</a></li>
+					<li><a href="#page-animal-profile">Doggy 37</a></li>
+					<li><a href="#page-animal-profile">Doggy 38</a></li>
+					<li><a href="#page-animal-profile">Doggy 39</a></li>
+					<li><a href="#page-animal-profile">Doggy 40</a></li>
+					<li><a href="#page-animal-profile">Doggy 41</a></li>
+					<li><a href="#page-animal-profile">Doggy 42</a></li>
+					<li><a href="#page-animal-profile">Doggy 43</a></li>
+					<li><a href="#page-animal-profile">Doggy 44</a></li>
+					<li><a href="#page-animal-profile">Doggy 45</a></li>
+				</ul>
+				<div class="floater bottom right">
+					<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+				</div>
+				<div class="floater top right">
+					<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+				</div>
+				<div class="floater top left">
+					<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+				</div>
 		</div>
 
 		<footer data-role="footer">
@@ -173,12 +225,25 @@
 				<li><a href="#page-user-profile">Profile</a></li>
 			</ul>
 		</footer>
+
+		<div class="model" id="list-add-modal">
+			 <div class="modal-back" data-deactivate="#list-add-modal"></div>
+			 <div class="modal-popup">
+			 	<div class="modal-head"></div>
+			 	<div class="modal-body"></div>
+			 	<div class="modal-foot"></div>
+			 </div>
+		</div>
 	</section>
 
 	<!-- Profile -->
 	<section data-role="page" id="page-user-profile"> 
 		<div data-role="main">
 			User!
+
+			<div>
+				<button></button>
+			</div>
 			<div class="flex-stretch"></div>
 			<form data-ajax="false" class="form" id="edit-profile" style="padding:10px;">
 				<div class="form-control">
@@ -199,11 +264,18 @@
 
 	<!-- Edit Profile -->
 	<section data-role="page" id="page-edit-profile">
+		<header data-role="header">
+			<h1>Edit Profile</h1>
+
+			<ul>
+				<li><a href="#" data-rel="back"> Back </a></li>
+			</ul>
+		</header>
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="edit-profile" style="padding:10px;">
+			<form data-ajax="false" class="form" id="don-edit-profile" style="padding:10px;">
 				<div class="form-control">
-					<a href="#page-map" class="form-button">Edit Profile</a>
+					<a href="#page-user-profile" class="form-button">Done</a>
 				</div>
 			</form>
 		</div>
@@ -236,7 +308,7 @@
 		<div data-role="main" class="display-flex flex-vertical">
 			Add New Doggy
 			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+			<form data-ajax="false" class="form" id="add-new" style="padding:10px;">
 				<div class="form-control">
 					<input class="form-input" type="text" id="doggy-name" data-role="none" placeholder="Doggy Name">
 				</div>
