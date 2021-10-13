@@ -26,6 +26,7 @@
 	<!-- Sign In -->
 	<section data-role="page" id="page-signin">
 		<div data-role="main" class="display-flex flex-vertical">
+			<div class="signin-background"> <!-- <img src="img/splash-image.png" alt=""> --> </div>
 			<div class="flex-stretch"></div>
 
 			<div class="wrapper">
@@ -36,10 +37,12 @@
 
 					<!-- all form element must have data-role="none" -->
 					<div class="form-control">
+						<label for="signin-username" class="form-label">Username</label>
 						<input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
 					</div> 
 
 					<div class="form-control">
+						<label for="signin-password" class="form-label">Password</label>
 						<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
 					</div>
 
@@ -48,10 +51,10 @@
 					</div>
 
 					<div class="form-control">
-						<p style="text-align: center;">
+						<!-- <p style="text-align: center;">
 							<a href="#page-forgot-password" style="font-weight: 700; font-size: 0.85em; text-decoration: underline;">Forgot Your Password?</a>
 						</p>
-						<hr>
+						<hr> -->
 						<p style="text-align: center; font-size: 0.85em;">
 							Don't have an account yet?  
 							<a href="#page-signup" style="font-weight: 700; text-decoration: underline;">Sign Up</a>
@@ -67,42 +70,48 @@
 	<section data-role="page" id="page-signup">
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
 
-				<div class="form-control">
-					<label for="signup-email" class="form-label">Email Address</label>
-					<input class="form-input" type="text" id="signup-email" data-role="none" placeholder="E-mail">
-				</div>
+			<div class="wrapper">
+				<h2 style="text-align: center; color: var(--color-main-dark);">
+					Create a New Account
+				</h2>
+				<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
 
-				<div class="form-control">
-					<label for="signup-username" class="form-label">Username</label>
-					<input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Username">
-				</div> 
+					<div class="form-control">
+						<label for="signup-email" class="form-label">Email Address</label>
+						<input class="form-input" type="text" id="signup-email" data-role="none" placeholder="E-mail">
+					</div>
 
-				<div class="form-control">
-					<label for="signup-password" class="form-label">Password</label>
-					<input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Password">
-				</div>
+					<div class="form-control">
+						<label for="signup-username" class="form-label">Username</label>
+						<input class="form-input" type="text" id="signup-username" data-role="none" placeholder="Username">
+					</div> 
 
-				<div class="form-control">
-					<label for="signup-password" class="form-label">Confirm Password</label>
-					<input class="form-input" type="password" id="signup-password-2" data-role="none" placeholder="Confirm Password">
-				</div>
+					<div class="form-control">
+						<label for="signup-password" class="form-label">Password</label>
+						<input class="form-input" type="password" id="signup-password" data-role="none" placeholder="Password">
+					</div>
 
-				<div class="form-control">
-					<input type="submit" value="Sign Up" class="form-button">
-				</div>
+					<div class="form-control">
+						<label for="signup-password" class="form-label">Confirm Password</label>
+						<input class="form-input" type="password" id="signup-password-2" data-role="none" placeholder="Confirm Password">
+					</div>
 
-				<div class="form-control">
+					<div class="form-control">
+						<input type="submit" value="Sign Up" class="form-button">
+					</div>
+
+					<div class="form-control">
 					
-					<p style="text-align: center; font-size: 0.85em;">
-						Already have an account?  
-						<a href="#page-signin" style="font-weight: 700; text-decoration: underline;">Sign In</a>
-					</p>
-				</div>
-			</form>
+						<p style="text-align: center; font-size: 0.85em;">
+							Already have an account?  
+							<a href="#page-signin" style="font-weight: 700; text-decoration: underline;">Sign In</a>
+						</p>
+					</div>
+				</form>
+			</div>
 
-			<div class="flex-stretch"></div>
+			<!-- <div class="flex-stretch"></div> -->
 
 		</div>
 	</section>
@@ -137,19 +146,57 @@
 		<div data-role="main">
 			Map!
 			<div class="map">
-				
+				<div class="flex-stretch form-control">
+					<form action="" class="form-search">
+						<input class="search-bar" type="text" name="search" placeholder="Search">
+					</form>
+				</div>
 			</div>
+
+			<div class="floater bottom right">
+            	<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+         	</div>
+
 		
 		</div>
 
 		<footer data-role="footer">
 			<ul>
-				<li><a href="#page-recent">Recent</a></li>
+				<!-- <li><a href="#page-recent">Recent</a></li> -->
 				<li><a href="#page-map">Map</a></li>
 				<li><a href="#page-list">List</a></li>
 				<li><a href="#page-user-profile">Profile</a></li>
 			</ul>
 		</footer>
+
+		<div class="modal" id="list-add-modal">
+         	<div class="modal-back" data-deactivate="#list-add-modal"></div>
+
+         	<form class="modal-popup form" id="list-add-form" data-ajax="false">
+
+            <div class="modal-head">
+            	<h4>Add New Doggy</h4>
+            </div>
+
+            <div class="modal-body">
+               <div class="form-control">
+                  <label for="list-add-name" class="form-label">Name</label>
+                  <input type="text" id="list-add-name" class="form-input" data-role="none" placeholder="Name">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-type" class="form-label">Color</label>
+                  <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Color">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-breed" class="form-label">Breed</label>
+                  <input type="text" id="list-add-breed" class="form-input" data-role="none" placeholder="Breed">
+               </div>
+            </div>
+            <div class="modal-foot">
+               <button type="submit" class="form-button">Save</button>
+            </div>
+         	</form>
+      	</div>
 	</section>
 
 
@@ -207,7 +254,7 @@
 				</ul>
 				</div>
 
-				<div class="floater bottom right">
+				<!-- <div class="floater bottom right">
 					<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
 				</div>
 				<div class="floater top right">
@@ -215,47 +262,49 @@
 				</div>
 				<div class="floater top left">
 					<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
-				</div>
-		</div>
+				</div> -->
+
+			 <div class="floater bottom right">
+          	  <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
+        	 </div>
+		</div> <!-- end of main -->
 
 		<footer data-role="footer">
 			<ul>
-				<li><a href="#page-recent">Recent</a></li>
+				<!-- <li><a href="#page-recent">Recent</a></li> -->
 				<li><a href="#page-map">Map</a></li>
 				<li><a href="#page-list">List</a></li>
 				<li><a href="#page-user-profile">Profile</a></li>
 			</ul>
 		</footer>
 
-		<div class="model" id="list-add-modal">
-			 <div class="modal-back" data-deactivate="#list-add-modal"></div>
-			 <div class="modal-popup">
-			 	<div class="modal-head"></div>
-			 	<div class="modal-body"></div>
-			 	<div class="modal-foot"></div>
-			 </div>
-		</div>
+		 
+
 	</section>
 
 	<!-- Profile -->
 	<section data-role="page" id="page-user-profile"> 
 		<div data-role="main" class="overscroll">
-			User!
-			<div class="flex-stretch"></div>
-			<div class="form-control form">
-				<button class="form-button js-logout">Log Out</button>
+			<div>
+				<div class="profile-pic">	</div>
+
+				<h2 style="text-align: center;">Ellie Lee</h2>
 			</div>
-			
+			<div class="flex-stretch"></div>
+		
 			<form data-ajax="false" class="form" id="edit-profile" style="padding:10px;">
 				<div class="form-control">
-					<a href="#page-edit-profile" class="form-button">Edit Profile</a>
+
+					<a href="#page-edit-profile" class="form-button" style="background-color: var(--color-main-medium);">Edit Profile</a>
+
+					<button class="form-button js-logout" style="margin-top: 10px;">Log Out</button>
 				</div>
 			</form>
 		</div>
 
 		<footer data-role="footer">
 			<ul>
-				<li><a href="#page-recent">Recent</a></li>
+				<!-- <li><a href="#page-recent">Recent</a></li> -->
 				<li><a href="#page-map">Map</a></li>
 				<li><a href="#page-list">List</a></li>
 				<li><a href="#page-user-profile">Profile</a></li>
@@ -269,7 +318,7 @@
 			<h1>Edit Profile</h1>
 
 			<ul>
-				<li><a href="#" data-rel="back"> Back </a></li>
+				<li><a href="#" data-rel="back"> &lt; </a></li>
 			</ul>
 		</header>
 		<div data-role="main" class="display-flex flex-vertical">
@@ -285,14 +334,24 @@
 	<!-- Animal Profile -->
 	<section data-role="page" id="page-animal-profile"> 
 		<header data-role="header">
-			<h1>Animal!</h1>
+			<h1>Dog I've Pet</h1>
 
 			<ul>
-				<li><a href="#" data-rel="back"> Back </a></li>
+				<li class="back-btn"><a href="#" data-rel="back"> &lt; </a></li>
 			</ul>
 		</header>
 		<div data-role="main">
-			Animal
+			<div class="dog-image">
+				Dog Images
+			</div>
+
+			<div class="flex-stretch"></div>
+			<form data-ajax="false" class="form" id="add-new" style="padding:10px;">
+				
+				<div class="form-control">
+					<a href="#page-map" class="form-button">Edit Info</a>
+				</div>
+			</form>
 		</div>
 
 	</section>

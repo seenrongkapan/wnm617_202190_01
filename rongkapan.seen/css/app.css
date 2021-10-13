@@ -4,12 +4,12 @@
 	--color-neutral-medium:  #c4c4c4;
 	--color-neutral-dark:  #656565;
 
-	--color-main-light:  #def2f9;
-	--color-main-medium:  #40a3c4;
+	--color-main-light:  #f9dcd8;
+	--color-main-medium:  #fba38f;
 	--color-main-dark:  #ee6c4d;
 
 	--color-white: white;
-	--color-black: black;
+	--color-black: #2E2E2E;
 
 	--font-sans: 'Manrope', Helvetica, Arial, sans-serif;
 
@@ -22,6 +22,7 @@
 
 body {
 	font-family: var(--font-sans);
+	color: var(--color-black);
 }
 
 
@@ -35,6 +36,7 @@ a {
 
 
 /* Layout Classes */
+
 .hidden {display: none;}
 
 .display-flex {display: flex;}
@@ -55,7 +57,10 @@ a {
 .overscroll-x { overflow-x: auto; }
 .overscroll-y { overflow-y: auto; }
 
-
+.fill-parent {
+   width: 100%;
+   height: 100%;
+}
 
 .centered { text-align:center; }
 .small { font-size: 0.8em; }
@@ -100,11 +105,13 @@ a {
    margin: 0;
    padding: 0;
    position: relative;
+   
 }
 
 [data-role="footer"] li {
    flex: 1 1 auto;
    text-align: center;
+   color: var(--color-main-dark);
 }
 
 [data-role="header"] a,
@@ -113,8 +120,10 @@ a {
 }
 
 [data-role="header"] a {
-   padding: 0 1em;
+   padding: 0 0.7em;
+   font-size: 1.5em;
 }
+
 
 .ui-header .ui-title {
    position: absolute;
@@ -126,7 +135,10 @@ a {
    margin: 0;
    font-size: 1rem;
    padding: 0;
+   color: var(--color-main-dark);
 }
+
+
 
 /*Form Element*/
 
@@ -174,9 +186,25 @@ a {
 }
 .ui-mobile .form-label {
 	font-size: 0.8em;
-	color: var(--color-neutral-medium);
-	margin: 1rem 0 0;
+	color: var(--color-neutral-dark);
+	margin: 1rem 0 0.3rem;
 }
+.ui-input-text, .ui-input-search{
+	background-color: white;
+	outline: 0;
+	border-radius: 2em;
+	border-style: none;
+	font: inherit;
+	padding: 0.5em 1em;
+	box-shadow: 0 0 7px rgba(0,0,0,0.4);
+	font: inherit;
+	margin: 1.25em 1em 0 1em;
+	color: var(--color-black);
+}
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: var(--color-neutral-medium);
+}
+
 
 
 
@@ -192,20 +220,12 @@ a {
 	background-position: center;
 }
 
-
-
-/*floater*/
-.floater {position: absolute;}
-.floater.left {left: 1em;}
-.floater.right {right: 1em;}
-.floater.bottom {bottom: 1em;}
-.floater.top {top: 1em;}
-
-
 /*Circle Button*/
+
 .btn-cicle {
 	display: inline-block;
-	background-color: var(--color-white);
+	background-color: var(--color-main-dark);
+	color: var(--color-white);
 	width: 3rem;
 	height: 3rem;
 	line-height: 3rem;
@@ -215,6 +235,14 @@ a {
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
+
+
+/*floater*/
+.floater {position: absolute;}
+.floater.left {left: 1em;}
+.floater.right {right: 1em;}
+.floater.bottom {bottom: 1em;}
+.floater.top {top: 1em;}
 
 
 
@@ -227,7 +255,7 @@ a {
 	height: 100%;
 	pointer-events: none;
 	opacity: 0;
-transition: all 0.3s;
+	transition: all 0.3s;
 }
 .modal.active {
 	pointer-events: initial;
@@ -249,21 +277,36 @@ transition: all 0.3s;
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%,calc(-50% + 3em);
+	transform: translate(-50%,calc(-50% + 3em));
 	border-radius: 5px;
 	width: 80vmin;
 	overflow: hidden;
 	transition: all 0,3s;
 }
+
 .modal-body {
 	padding: 10px;
 	background-color: var(--color-white);
 }
+.modal-head{
+	background-color: var(--color-main-light);
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: 500;
+}
+.modal-head h4{
+	margin: 0;
+	padding: 0.7em 0 0.7em 0;
+}
+.modal-foot {
+	background-color: var(--color-white);
+	padding: 0.5em 1em 1em 1em;
+}
 .modal-head,
 .modal-foot {
-	background-color: var(--color-neutral-light);
 	line-height: 2rem;
-	padding: 0 1em;
+	border-style: none;
+	outline: 0;
 }
 .modal.active .modal-popup {
 	transform: translate(-50%,-50%);
@@ -312,10 +355,41 @@ transition: all 0.3s;
    display: inline-block;
 }
 
+.profile-pic {
+	background-color: var(--color-neutral-light);
+	height: 25vh;
+   width: 25vh;
+   border-radius: 7em;
+   margin: 3.4em auto 2em;
+   background-image: url(../img/profile-pic.png);
+   background-size: cover;
+	background-position: center;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+
+
+.dog-image {
+	background-color: var(--color-neutral-light);
+	height: 30vh;
+}
+
 .wrapper {
-	background-color: grey;
 	position: relative;
 	width: 100%;
 	height: 60%;
-	box-shadow: 0px -2px 4px rgb(0 0 0 / 0.3);
+	/*box-shadow: 0px -2px 6px rgb(0 0 0 / 0.1);*/
+	z-index: 1;
+	background-color: var(--color-white);
 }
+
+.signin-background {
+	/*background-color: #fff0ee;*/
+	background-image: url(../img/splash-image.png); /*image: Freepik.com*/
+	background-size: cover;
+	background-position: center;
+	position: absolute;
+	width: 100%;
+   height: 45%;
+   z-index: 0;
+}
+ 
