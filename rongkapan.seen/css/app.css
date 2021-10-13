@@ -1,12 +1,12 @@
 
 :root {
-	--color-neutral-light:  #ddd;
-	--color-neutral-medium:  #999;
-	--color-neutral-dark:  #444;
+	--color-neutral-light:  #e1e1e1;
+	--color-neutral-medium:  #c4c4c4;
+	--color-neutral-dark:  #656565;
 
 	--color-main-light:  #def2f9;
 	--color-main-medium:  #40a3c4;
-	--color-main-dark:  #0f4557;
+	--color-main-dark:  #ee6c4d;
 
 	--color-white: white;
 	--color-black: black;
@@ -20,6 +20,9 @@
 	box-sizing: border-box;
 }
 
+body {
+	font-family: var(--font-sans);
+}
 
 
 /*Core Element*/
@@ -28,9 +31,7 @@ a {
 	text-decoration: none;
 	font-weight: bold;
 }
-body {
-	font-family: var(--font-sans);
-}
+
 
 
 /* Layout Classes */
@@ -77,6 +78,7 @@ body {
 [data-role="main"] {
 	flex: 1 1 100%; /*stretch flex as much as possible*/
 	position: relative;
+	overflow: hidden;
 }
 
 [data-role="header"],
@@ -132,6 +134,16 @@ body {
 .form-control {
 	margin: 1em 0;
 }
+.signin-form .form-input {
+    width: 100%;
+    display: inline-block;
+    border: 1px solid var(--color-neutral-medium);
+    margin: 0;
+    padding: 0.5em 1em;
+    border-radius: 0.3em;
+    outline: 0;
+    font: inherit;
+}
 .form-input {
 	width: 100%;
 	display: inline-block;
@@ -142,20 +154,23 @@ body {
 	outline: 0;
 	font: inherit;
 }
+.ui-input-btn,
+.form .form-button, 
 .form-button {
 	width: 100%;
 	display: inline-block;
 	border-width: 0;
-	background-color: var(--color-neutral-light);
+	background-color: var(--color-main-dark);
+	color: white;
 	margin: 0;
 	padding: 0.5em 1em;
-	border-radius: 0.3em;
+	border-radius: 2em;
 	outline: 0;
 	font: inherit;
 	text-align: center;
 	cursor: pointer;
 	text-decoration: none;
-	font-weight: 500;
+	font-weight: 700;
 }
 .ui-mobile .form-label {
 	font-size: 0.8em;
@@ -182,11 +197,12 @@ body {
 /*floater*/
 .floater {position: absolute;}
 .floater.left {left: 1em;}
-.floater.right {left: 1em;}
-.floater.bottom {left: 1em;}
-.floater.top {left: 1em;}
+.floater.right {right: 1em;}
+.floater.bottom {bottom: 1em;}
+.floater.top {top: 1em;}
 
 
+/*Circle Button*/
 .btn-cicle {
 	display: inline-block;
 	background-color: var(--color-white);
@@ -214,12 +230,8 @@ body {
 transition: all 0.3s;
 }
 .modal.active {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background-color: rgba(0, 0, 0, 0.7);
+	pointer-events: initial;
+   opacity: 1;
 }
 .modal-back {
    position: absolute;
@@ -266,4 +278,44 @@ transition: all 0.3s;
 	flex-direction: column;
 	transition: all 0.3s;
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+.modal-drawer.left,
+.modal-drawer.right {
+   height: 100%;
+   width: 70vw;
+}
+.modal-drawer.left { left: 0; transform:translateX(-100%); }
+.modal-drawer.right { right: 0; transform:translateX(100%); }
+
+.modal-drawer.top,
+.modal-drawer.bottom {
+   height: 40vh;
+   width: 100%;
+}
+.modal-drawer.top { top: 0; transform:translateY(-100%); }
+.modal-drawer.bottom { bottom: 0; transform:translateY(100%); }
+
+.modal.active .modal-drawer {
+   transform: translate(0);
+}
+
+
+.modal-drawer .modal-body {
+   flex: 1 1 100%;
+}
+
+
+
+.icon {
+   width: 1em;
+   height: 1em;
+   display: inline-block;
+}
+
+.wrapper {
+	background-color: grey;
+	position: relative;
+	width: 100%;
+	height: 60%;
+	box-shadow: 0px -2px 4px rgb(0 0 0 / 0.3);
 }

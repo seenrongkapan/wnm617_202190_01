@@ -27,33 +27,38 @@
 	<section data-role="page" id="page-signin">
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="signin-form" style="padding:10px;">
 
-				<!-- all form element must have data-role="none" -->
-				<div class="form-control">
-					<input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
-				</div> 
+			<div class="wrapper">
+				<h2 style="text-align: center; color: var(--color-main-dark);">
+				Welcome to Must Pet!
+				</h2>
+				<form data-ajax="false" class="form" id="signin-form" style="padding:10px;">
 
-				<div class="form-control">
-					<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
-				</div>
+					<!-- all form element must have data-role="none" -->
+					<div class="form-control">
+						<input class="form-input" type="text" id="signin-username" data-role="none" placeholder="Username">
+					</div> 
 
-				<div class="form-control">
-					<input type="submit" value="Sign In" class="form-button">
-				</div>
+					<div class="form-control">
+						<input class="form-input" type="password" id="signin-password" data-role="none" placeholder="Password">
+					</div>
 
-				<div class="form-control">
-					<p style="text-align: center;">
-						<a href="#page-forgot-password" style="font-weight: 400; font-size: 0.85em; text-decoration: underline;">Forgot Your Password?</a>
-					</p>
-					<hr>
-					<p style="text-align: center; font-size: 0.85em;">
-						Don't have an account yet?  
-						<a href="#page-signup" style="font-weight: 400; text-decoration: underline;">Sign Up</a>
-					</p>
-				</div>
-			</form>
+					<div class="form-control">
+						<input type="submit" value="Sign In" class="form-button">
+					</div>
 
+					<div class="form-control">
+						<p style="text-align: center;">
+							<a href="#page-forgot-password" style="font-weight: 700; font-size: 0.85em; text-decoration: underline;">Forgot Your Password?</a>
+						</p>
+						<hr>
+						<p style="text-align: center; font-size: 0.85em;">
+							Don't have an account yet?  
+							<a href="#page-signup" style="font-weight: 700; text-decoration: underline;">Sign Up</a>
+						</p>
+					</div>
+				</form>
+			</div> <!-- end of wrapper -->
 
 		</div>
 	</section>
@@ -63,14 +68,6 @@
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
 			<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
-
-				<div class="form-control">
-					<input class="form-input" type="text" id="signup-first-name" data-role="none" placeholder="First Name">
-				</div>
-
-				<div class="form-control">
-					<input class="form-input" type="text" id="signup-last-name" data-role="none" placeholder="Last Name">
-				</div>
 
 				<div class="form-control">
 					<label for="signup-email" class="form-label">Email Address</label>
@@ -88,6 +85,7 @@
 				</div>
 
 				<div class="form-control">
+					<label for="signup-password" class="form-label">Confirm Password</label>
 					<input class="form-input" type="password" id="signup-password-2" data-role="none" placeholder="Confirm Password">
 				</div>
 
@@ -99,7 +97,7 @@
 					
 					<p style="text-align: center; font-size: 0.85em;">
 						Already have an account?  
-						<a href="#page-signin" style="font-weight: 400; text-decoration: underline;">Sign In</a>
+						<a href="#page-signin" style="font-weight: 700; text-decoration: underline;">Sign In</a>
 					</p>
 				</div>
 			</form>
@@ -158,7 +156,8 @@
 
 	<!-- List -->
 	<section data-role="page" id="page-list"> 
-		<div data-role="main" class="overscroll">
+		<div data-role="main">
+			<div class="overscroll floater fill-parent">
 				<ul>
 					<li><a href="#page-animal-profile">Doggy 1</a></li>
 					<li><a href="#page-animal-profile">Doggy 2</a></li>
@@ -206,6 +205,8 @@
 					<li><a href="#page-animal-profile">Doggy 44</a></li>
 					<li><a href="#page-animal-profile">Doggy 45</a></li>
 				</ul>
+				</div>
+
 				<div class="floater bottom right">
 					<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
 				</div>
@@ -238,13 +239,13 @@
 
 	<!-- Profile -->
 	<section data-role="page" id="page-user-profile"> 
-		<div data-role="main">
+		<div data-role="main" class="overscroll">
 			User!
-
-			<div>
-				<button></button>
-			</div>
 			<div class="flex-stretch"></div>
+			<div class="form-control form">
+				<button class="form-button js-logout">Log Out</button>
+			</div>
+			
 			<form data-ajax="false" class="form" id="edit-profile" style="padding:10px;">
 				<div class="form-control">
 					<a href="#page-edit-profile" class="form-button">Edit Profile</a>
