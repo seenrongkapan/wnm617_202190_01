@@ -14,6 +14,7 @@
 	--font-sans: 'Manrope', Helvetica, Arial, sans-serif;
 
 	--header-height:  3rem;
+	--footer-height:  3.5rem;
 }
 
 * {
@@ -86,8 +87,7 @@ a {
 	overflow: hidden;
 }
 
-[data-role="header"],
-[data-role="footer"] {
+[data-role="header"] {
 	flex: none;
    height: var(--header-height);
    line-height: var(--header-height);
@@ -96,6 +96,19 @@ a {
    box-shadow: 0 0 5px rgba(0,0,0,0.2);
    position: relative;
    overflow: hidden;
+   z-index: 1;
+}
+
+[data-role="footer"] {
+	flex: none;
+   height: var(--footer-height);
+   line-height: var(--footer-height);
+   border-width: 0;
+   background-color: var(--color-white);
+   box-shadow: 0 0 5px rgba(0,0,0,0.2);
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
 }
 
 [data-role="header"] ul,
@@ -183,6 +196,7 @@ a {
 	cursor: pointer;
 	text-decoration: none;
 	font-weight: 700;
+	-webkit-appearance: none;
 }
 .ui-mobile .form-label {
 	font-size: 0.8em;
@@ -222,7 +236,7 @@ a {
 
 /*Circle Button*/
 
-.btn-cicle {
+.btn-circle {
 	display: inline-block;
 	background-color: var(--color-main-dark);
 	color: var(--color-white);
@@ -348,12 +362,33 @@ a {
 }
 
 
-
+/*ICONS*/
 .icon {
    width: 1em;
    height: 1em;
    display: inline-block;
 }
+
+.nav-icon-set {
+   
+}
+.nav-icon {
+   display: block;
+   line-height: 2rem;
+   font-size: 1.5rem;
+}
+.nav-icon .icon {
+   vertical-align: middle;
+}
+.nav-icon-label {
+   display: block;
+   line-height: 1rem;
+   font-size: 0.7rem;
+}
+
+
+
+
 
 .profile-pic {
 	background-color: var(--color-neutral-light);
