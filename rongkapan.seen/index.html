@@ -4,7 +4,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Dog I've Pet App</title>
+	<title>Must Pet</title>
 
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -147,9 +147,11 @@
 			Map!
 			<div class="map">
 				<div class="flex-stretch form-control">
-					<form action="" class="form-search">
-						<input class="search-bar" type="text" name="search" placeholder="Search">
-					</form>
+					<div class="form-search">
+						<!-- <span class="icon"><img src="/img/icon/search.svg" alt=""></span> -->
+						<input class="search-bar" type="search" placeholder="Search">
+
+					</div>
 				</div>
 			</div>
 
@@ -201,52 +203,14 @@
 		</header>
 		<div data-role="main">
 			<div class="overscroll floater fill-parent">
-				<ul>
-					<li><a href="#page-animal-profile">Doggy 1</a></li>
-					<li><a href="#page-animal-profile">Doggy 2</a></li>
-					<li><a href="#page-animal-profile">Doggy 3</a></li>
-					<li><a href="#page-animal-profile">Doggy 4</a></li>
-					<li><a href="#page-animal-profile">Doggy 5</a></li>
-					<li><a href="#page-animal-profile">Doggy 6</a></li>
-					<li><a href="#page-animal-profile">Doggy 7</a></li>
-					<li><a href="#page-animal-profile">Doggy 8</a></li>
-					<li><a href="#page-animal-profile">Doggy 9</a></li>
-					<li><a href="#page-animal-profile">Doggy 10</a></li>
-					<li><a href="#page-animal-profile">Doggy 11</a></li>
-					<li><a href="#page-animal-profile">Doggy 12</a></li>
-					<li><a href="#page-animal-profile">Doggy 13</a></li>
-					<li><a href="#page-animal-profile">Doggy 14</a></li>
-					<li><a href="#page-animal-profile">Doggy 15</a></li>
-					<li><a href="#page-animal-profile">Doggy 16</a></li>
-					<li><a href="#page-animal-profile">Doggy 17</a></li>
-					<li><a href="#page-animal-profile">Doggy 18</a></li>
-					<li><a href="#page-animal-profile">Doggy 19</a></li>
-					<li><a href="#page-animal-profile">Doggy 20</a></li>
-					<li><a href="#page-animal-profile">Doggy 21</a></li>
-					<li><a href="#page-animal-profile">Doggy 22</a></li>
-					<li><a href="#page-animal-profile">Doggy 23</a></li>
-					<li><a href="#page-animal-profile">Doggy 24</a></li>
-					<li><a href="#page-animal-profile">Doggy 25</a></li>
-					<li><a href="#page-animal-profile">Doggy 26</a></li>
-					<li><a href="#page-animal-profile">Doggy 27</a></li>
-					<li><a href="#page-animal-profile">Doggy 28</a></li>
-					<li><a href="#page-animal-profile">Doggy 29</a></li>
-					<li><a href="#page-animal-profile">Doggy 30</a></li>
-					<li><a href="#page-animal-profile">Doggy 31</a></li>
-					<li><a href="#page-animal-profile">Doggy 32</a></li>
-					<li><a href="#page-animal-profile">Doggy 33</a></li>
-					<li><a href="#page-animal-profile">Doggy 34</a></li>
-					<li><a href="#page-animal-profile">Doggy 35</a></li>
-					<li><a href="#page-animal-profile">Doggy 36</a></li>
-					<li><a href="#page-animal-profile">Doggy 37</a></li>
-					<li><a href="#page-animal-profile">Doggy 38</a></li>
-					<li><a href="#page-animal-profile">Doggy 39</a></li>
-					<li><a href="#page-animal-profile">Doggy 40</a></li>
-					<li><a href="#page-animal-profile">Doggy 41</a></li>
-					<li><a href="#page-animal-profile">Doggy 42</a></li>
-					<li><a href="#page-animal-profile">Doggy 43</a></li>
-					<li><a href="#page-animal-profile">Doggy 44</a></li>
-					<li><a href="#page-animal-profile">Doggy 45</a></li>
+				<ul class="animallist">
+					<li class="animallist-item" data-template="#animallist-item-template"></li>
+					<li class="animallist-item" data-template="#animallist-item-template"></li>
+					<li class="animallist-item" data-template="#animallist-item-template"></li>
+					<li class="animallist-item" data-template="#animallist-item-template"></li>
+					<li class="animallist-item" data-template="#animallist-item-template"></li>
+					<li class="animallist-item" data-template="#animallist-item-template"></li>
+					<li class="animallist-item" data-template="#animallist-item-template"></li>
 				</ul>
 				</div>
 
@@ -393,6 +357,19 @@
         		<span class="nav-icon-label">Profile</span>
       		</a></li>
    		</ul>
+   </script>
+
+    <script type="text/template" id="animallist-item-template">
+   <a href="#page-animal-profile" class="display-flex">
+      <div class="flex-none animallist-item-image">
+         <img src="img/dog1.JPG" alt="">
+      </div>
+      <div class="flex-stretch animallist-item-body padding-md">
+         <div class="animallist-item-name">Animal Name</div>
+         <div class="animallist-item-type"><strong>Color:</strong> Yellow</div>
+         <div class="animallist-item-breed"><strong>Breed:</strong> Labrador Retriever</div>
+      </div>
+   </a>
    </script>
 	
 </body>
