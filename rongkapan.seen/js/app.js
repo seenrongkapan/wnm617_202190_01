@@ -52,9 +52,9 @@ $(()=> {
    	})
 
 	$({
-	"#page-recent":".nav-icon-set li:nth-child(1)",
-      "#page-list":".nav-icon-set li:nth-child(2)",
-      "#page-user-profile":".nav-icon-set li:nth-child(3)",
+		"#page-recent":".nav-icon-set li:nth-child(1)",
+      	"#page-list":".nav-icon-set li:nth-child(2)",
+      	"#page-user-profile":".nav-icon-set li:nth-child(3)",
 	}[location.hash]).addClass("active");
 
 });
