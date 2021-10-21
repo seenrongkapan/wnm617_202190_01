@@ -183,7 +183,11 @@
                   <input type="text" id="list-add-name" class="form-input" data-role="none" placeholder="Name">
                </div>
                <div class="form-control">
-                  <label for="list-add-type" class="form-label">Color</label>
+                  <label for="list-add-gender" class="form-label">Gender</label>
+                  <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Color">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-color" class="form-label">Color</label>
                   <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Color">
                </div>
                <div class="form-control">
@@ -243,7 +247,38 @@
 
 		<footer data-role="footer" data-template="#footer-template"></footer>
 
-		 
+		 <div class="modal" id="list-add-modal">
+         	<div class="modal-back" data-deactivate="#list-add-modal"></div>
+
+         	<form class="modal-popup form" id="list-add-form" data-ajax="false">
+
+            <div class="modal-head">
+            	<h4>Add New Doggy</h4>
+            </div>
+
+            <div class="modal-body">
+               <div class="form-control">
+                  <label for="list-add-name" class="form-label">Name</label>
+                  <input type="text" id="list-add-name" class="form-input" data-role="none" placeholder="Name">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-gender" class="form-label">Gender</label>
+                  <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Color">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-color" class="form-label">Color</label>
+                  <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Color">
+               </div>
+               <div class="form-control">
+                  <label for="list-add-breed" class="form-label">Breed</label>
+                  <input type="text" id="list-add-breed" class="form-input" data-role="none" placeholder="Breed">
+               </div>
+            </div>
+            <div class="modal-foot">
+               <button type="submit" class="form-button">Save</button>
+            </div>
+         	</form>
+      	</div>
 
 	</section>
 
@@ -259,15 +294,19 @@
 
 
 				<h2 style="text-align: center;">Ellie Lee</h2>
+
+				<div class="profile-detail">
+					ellie.lee@email.com
+				</div>
 			</div>
 			<div class="flex-stretch"></div>
 		
 			<form data-ajax="false" class="form" id="edit-profile" style="padding:10px;">
 				<div class="form-control">
 
-					<a href="#page-edit-profile" class="form-button" style="background-color: var(--color-main-medium);">Edit Profile</a>
+					<a href="#page-edit-profile" class="form-button">Edit Profile</a>
 
-					<button class="form-button js-logout" style="margin-top: 10px;">Log Out</button>
+					<button class="form-button js-logout" style="margin-top: 10px; background-color: var(--color-main-medium);">Log Out</button>
 				</div>
 			</form>
 		</div>
@@ -289,7 +328,9 @@
 
 			<div>
 				<div class="profile-pic">	</div>
-				<p>Change Profile Picture</p>
+				<p style="text-align: center; font-size: 0.75em; text-decoration: underline;">
+					Change Profile Picture
+				</p>
 
 				<h2 style="text-align: center;">Ellie Lee</h2>
 			</div>
@@ -310,6 +351,10 @@
 			<ul>
 				<li class="back-btn"><a href="#" data-rel="back"> &lt; </a></li>
 			</ul>
+
+			<div class="more-edit">
+				<img src="img/icons/more.svg" alt="">
+			</div>
 		</header>
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="dog-image">

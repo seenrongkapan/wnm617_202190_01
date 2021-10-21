@@ -407,7 +407,7 @@ a {
 
 
 
-
+/*PROFILE*/
 .profile-pic {
 	background-color: var(--color-neutral-light);
 	height: 25vh;
@@ -418,6 +418,9 @@ a {
    background-size: cover;
 	background-position: center;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+}
+.profile-detail {
+	text-align: center;
 }
 
 
