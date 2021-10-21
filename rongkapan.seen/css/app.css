@@ -230,6 +230,8 @@ a {
 
 
 
+
+
 .map {
 	position: absolute;
 	top: 0;
@@ -419,10 +421,7 @@ a {
 }
 
 
-.dog-image {
-	background-color: var(--color-neutral-light);
-	height: 30vh;
-}
+
 
 .wrapper {
 	position: relative;
@@ -482,23 +481,44 @@ a {
 
 
 /* ANIMAL PROFILE */
-.animal-profile-top {
-   flex: none;
-   height: 40vh;
+.dog-image {
+	flex: none;
+	background-color: var(--color-neutral-light);
+	height: 30vh;
 }
+.dog-image img {
+	height: 30vh;
+	width: 100%;
+	object-fit: cover;
+	vertical-align: middle;
+}
+.dog-description {
+	padding: 1em 2em 1em 2em;
+}
+.dog-profile-name{
+	 font-size: 1.75em;
+    font-weight: 700;
+    margin-bottom: .25em;
+    color: var(--color-main-dark);
+}
+
+.dog-profile-color, .dog-profile-breed, .dog-profile-gender {
+	margin-bottom: 0.5em;
+}
+
 .animal-profile-bottom {
    flex: 1 1 auto;
    position: relative;
 }
 
 
-.floating-header {
+/*.floating-header {
    position: absolute;
    background-color: rgba(255,255,255,0.15);
    width: 100%;
    top: 0;
    left: 0;
    box-shadow: none;
-}
+}*/
 
  

@@ -71,7 +71,7 @@
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="flex-stretch"></div>
 
-			<div class="wrapper">
+			<!-- <div class="wrapper"> -->
 				<h2 style="text-align: center; color: var(--color-main-dark);">
 					Create a New Account
 				</h2>
@@ -97,9 +97,13 @@
 						<input class="form-input" type="password" id="signup-password-2" data-role="none" placeholder="Confirm Password">
 					</div>
 
-					<div class="form-control">
-						<input type="submit" value="Sign Up" class="form-button">
+					<form data-ajax="false" class="form" id="edit-profile" style="padding:10px;">
+						<div class="form-control">
+
+						<a href="#page-signin" class="form-button" style="background-color: var(--color-main-dark);">Sign Up</a>
+
 					</div>
+					</form>
 
 					<div class="form-control">
 					
@@ -109,7 +113,7 @@
 						</p>
 					</div>
 				</form>
-			</div>
+			<!-- </div> -->
 
 			<!-- <div class="flex-stretch"></div> -->
 
@@ -307,19 +311,31 @@
 				<li class="back-btn"><a href="#" data-rel="back"> &lt; </a></li>
 			</ul>
 		</header>
-		<div data-role="main">
+		<div data-role="main" class="display-flex flex-vertical">
 			<div class="dog-image">
-				Dog Images
+				<img src="img/dog1.JPG" alt="">
+				
+			</div> <!-- end dog image -->
+
+			<div class="dog-description">
+				<div class="dog-name">
+					<div class="dog-profile-name">Luna</div>
+					<div class="dog-profile-color"><strong >Color:</strong> Yellow</div>
+        			<div class="dog-profile-breed"><strong>Breed:</strong> Labrador Retriever </div>
+        			<div class="dog-profile-gender"><strong>Gender:</strong> Female </div>
+					<div class="dog-profile-info"><strong>Other:</strong> Loves playing fetch. </div>
+				</div>
 			</div>
 
-			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="edit-dog-info" style="padding:10px;">
+			<div class="animal-profile-bottom">
+            <div class="map"></div>
+           <!--  <form data-ajax="false" class="form floater" id="edit-dog-info" style="padding:10px; z-index: 2;"> -->
+         </div>
+         
+				 
 				
-				<div class="form-control">
-					<a href="#page-map" class="form-button">Edit Info</a>
-				</div>
-			</form>
-		</div>
+
+	
 
 	</section>
 
