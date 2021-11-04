@@ -1,0 +1,107 @@
+[
+  {
+    "id": 1,
+    "user_id": 8,
+    "name": "Vitricomp",
+    "gender": "male",
+    "type": "dog",
+    "breed": "labrador",
+    "description": "Pariatur proident tempor in sunt culpa consequat magna velit do elit laborum Lorem quis anim. Adipisicing et adipisicing anim do enim anim fugiat qui mollit cillum id et. Aliqua ex consectetur ad adipisicing eu qui reprehenderit mollit ipsum est.",
+    "img": "https://via.placeholder.com/400/948/fff/?text=Vitricomp",
+    "date_create": "2021-09-07 03:30:18"
+  },
+  {
+    "id": 2,
+    "user_id": 8,
+    "name": "Providco",
+    "gender": "male",
+    "type": "cat",
+    "description": "Incididunt veniam adipisicing cillum pariatur velit sit aute deserunt elit elit excepteur deserunt cillum. Deserunt aliqua nulla do veniam sunt aliqua esse deserunt exercitation elit Lorem laborum amet fugiat. Sunt occaecat anim consequat dolor voluptate et aliquip ea eu reprehenderit nisi.",
+    "img": "https://via.placeholder.com/400/998/fff/?text=Providco",
+    "date_create": "2021-04-01 10:49:42"
+  },
+  {
+    "id": 3,
+    "user_id": 2,
+    "name": "Gushkool",
+    "gender": "male",
+    "type": "cat",
+    "description": "Nisi incididunt incididunt ullamco voluptate consectetur ex eu. Occaecat veniam id non eu id proident enim sint qui laborum occaecat enim cillum nostrud. Quis cupidatat Lorem quis incididunt nostrud.",
+    "img": "https://via.placeholder.com/400/749/fff/?text=Gushkool",
+    "date_create": "2020-12-23 09:44:39"
+  },
+  {
+    "id": 4,
+    "user_id": 2,
+    "name": "Golistic",
+    "gender": "male",
+    "type": "dog",
+    "breed": "pitbull",
+    "description": "Culpa commodo sit mollit aute non. Mollit incididunt anim veniam excepteur mollit ipsum exercitation. Officia pariatur laborum voluptate ut irure in occaecat officia.",
+    "img": "https://via.placeholder.com/400/999/fff/?text=Golistic",
+    "date_create": "2021-03-20 03:42:42"
+  },
+  {
+    "id": 5,
+    "user_id": 9,
+    "name": "Dancerity",
+    "gender": "male",
+    "type": "horse",
+    "description": "Cillum aliqua reprehenderit ex velit do ullamco ut aliquip sit laboris. Eu nostrud minim commodo consequat laboris eu ullamco esse officia. Laboris aliquip ea mollit laborum.",
+    "img": "https://via.placeholder.com/400/785/fff/?text=Dancerity",
+    "date_create": "2020-11-15 12:41:04"
+  },
+  {
+    "id": 6,
+    "user_id": 2,
+    "name": "Isologia",
+    "gender": "male",
+    "type": "horse",
+    "description": "Reprehenderit culpa exercitation eiusmod incididunt do in. Ea consequat anim nisi aliqua aute ad excepteur anim cillum occaecat duis commodo irure adipisicing. Sint laborum Lorem irure laboris voluptate reprehenderit aute dolor ipsum esse.",
+    "img": "https://via.placeholder.com/400/714/fff/?text=Isologia",
+    "date_create": "2021-02-18 06:25:54"
+  },
+  {
+    "id": 7,
+    "user_id": 6,
+    "name": "Cyclonica",
+    "gender": "male",
+    "type": "horse",
+    "description": "Cillum commodo duis in quis ex ipsum cillum labore velit ipsum. Aute mollit est incididunt irure ut labore exercitation mollit. Amet proident laboris voluptate nulla ipsum occaecat.",
+    "img": "https://via.placeholder.com/400/784/fff/?text=Cyclonica",
+    "date_create": "2021-08-20 10:06:44"
+  },
+  {
+    "id": 8,
+    "user_id": 8,
+    "name": "Zilphur",
+    "gender": "male",
+    "type": "dog",
+    "breed": "pitbull",
+    "description": "Duis ullamco irure eiusmod do fugiat velit commodo aute deserunt officia nulla consectetur dolor. Quis duis duis exercitation culpa proident exercitation. Commodo mollit incididunt adipisicing ipsum laborum velit.",
+    "img": "https://via.placeholder.com/400/787/fff/?text=Zilphur",
+    "date_create": "2021-03-13 06:29:40"
+  },
+  {
+    "id": 9,
+    "user_id": 8,
+    "name": "Surelogic",
+    "gender": "male",
+    "type": "dog",
+    "breed": "pitbull",
+    "description": "Ut cupidatat deserunt esse velit minim fugiat laborum eu amet enim consectetur amet. Cupidatat nostrud sunt consectetur excepteur in culpa quis fugiat duis. Est amet qui enim ut velit culpa et nulla aliqua cupidatat.",
+    "img": "https://via.placeholder.com/400/723/fff/?text=Surelogic",
+    "date_create": "2020-06-04 08:52:32"
+  },
+  {
+    "id": 10,
+    "user_id": 5,
+    "name": "Accruex",
+    "gender": "male",
+    "type": "dog",
+    "breed": "golden retreiver",
+    "description": "Et tempor esse ea magna exercitation cillum quis do enim sint sit nulla voluptate tempor. Aute aliqua dolor veniam excepteur Lorem ipsum. Eiusmod officia commodo qui labore labore cupidatat esse incididunt duis velit.",
+    "img": "https://via.placeholder.com/400/889/fff/?text=Accruex",
+    "date_create": "2020-04-09 09:33:14"
+  }
+]

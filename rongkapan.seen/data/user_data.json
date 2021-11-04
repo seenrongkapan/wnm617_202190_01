@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Amelia Cash",
+    "username": "user1",
+    "email": "user1@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/800/fff/?text=user1",
+    "date_create": "2021-04-17 02:56:30"
+  },
+  {
+    "id": 2,
+    "name": "Bowen Buchanan",
+    "username": "user2",
+    "email": "user2@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/792/fff/?text=user2",
+    "date_create": "2020-10-22 01:10:18"
+  },
+  {
+    "id": 3,
+    "name": "Willie Peck",
+    "username": "user3",
+    "email": "user3@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/829/fff/?text=user3",
+    "date_create": "2020-02-20 11:11:22"
+  },
+  {
+    "id": 4,
+    "name": "Rosemarie Willis",
+    "username": "user4",
+    "email": "user4@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/911/fff/?text=user4",
+    "date_create": "2020-01-05 06:39:08"
+  },
+  {
+    "id": 5,
+    "name": "Dianne Mcgowan",
+    "username": "user5",
+    "email": "user5@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/769/fff/?text=user5",
+    "date_create": "2021-09-16 01:19:57"
+  },
+  {
+    "id": 6,
+    "name": "Lessie Schroeder",
+    "username": "user6",
+    "email": "user6@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/894/fff/?text=user6",
+    "date_create": "2020-06-23 05:07:03"
+  },
+  {
+    "id": 7,
+    "name": "Jenny Gonzales",
+    "username": "user7",
+    "email": "user7@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/717/fff/?text=user7",
+    "date_create": "2020-08-21 10:55:39"
+  },
+  {
+    "id": 8,
+    "name": "Collins Stokes",
+    "username": "user8",
+    "email": "user8@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/795/fff/?text=user8",
+    "date_create": "2021-06-13 02:28:06"
+  },
+  {
+    "id": 9,
+    "name": "Cochran Levy",
+    "username": "user9",
+    "email": "user9@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/705/fff/?text=user9",
+    "date_create": "2020-05-18 10:17:08"
+  },
+  {
+    "id": 10,
+    "name": "Hines Diaz",
+    "username": "user10",
+    "email": "user10@gmail.com",
+    "password": "md5(pass)",
+    "img": "https://via.placeholder.com/400/852/fff/?text=user10",
+    "date_create": "2021-07-30 10:47:53"
+  }
+]

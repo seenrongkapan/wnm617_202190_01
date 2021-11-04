@@ -1,6 +1,6 @@
 <meta name="viewport" content="width=device-width">
 
-<base href="http://seenmydesign.com/aau/wnm617/rongkapan.seen/m01/">
+<base href="http://seenmydesign.com/aau/wnm617/rongkapan.seen/about_page/ ">
 
 <link rel="stylesheet" href="lib/css/styleguide.css">
 <link rel="stylesheet" href="lib/css/gridsystem.css">

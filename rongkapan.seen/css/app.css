@@ -98,7 +98,7 @@ a {
    box-shadow: 0 0 5px rgba(0,0,0,0.2);
    position: relative;
    overflow: hidden;
-   z-index: 1;
+   z-index: 2;
 }
 
 [data-role="footer"] {
@@ -259,6 +259,19 @@ a {
 }
 
 
+.back-btn-circle {
+	display: inline-block;
+	background-color: var(--color-white);
+	color: var(--color-neutral-dark);
+	width: 2.5rem;
+	height: 2.5rem;
+	line-height: 2.3rem;
+	text-align: center;
+	font-size: 1.75rem;
+	border-radius: 2em;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
 
 /*floater*/
 .floater {position: absolute;}
@@ -320,6 +333,7 @@ a {
 .modal-head h4{
 	margin: 0;
 	padding: 0.7em 0 0.7em 0;
+	color: var(--color-main-dark);
 }
 .modal-foot {
 	background-color: var(--color-white);
@@ -499,12 +513,14 @@ a {
 	padding: 1em 2em 1em 2em;
 }
 .dog-profile-name{
-	 font-size: 1.75em;
+	 font-size: 1.65em;
     font-weight: 700;
     margin-bottom: .25em;
     color: var(--color-main-dark);
 }
-
+.dog-profile-color, .dog-profile-breed, .dog-profile-gender, .dog-profile-info {
+	font-size: 0.85em;
+}
 .dog-profile-color, .dog-profile-breed, .dog-profile-gender {
 	margin-bottom: 0.5em;
 }

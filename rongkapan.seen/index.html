@@ -148,7 +148,7 @@
 	<!-- Map -->
 	<section data-role="page" id="page-map">
 		<div data-role="main">
-			Map!
+			
 			<div class="map">
 				<div class="flex-stretch form-control">
 					<div class="form-search">
@@ -184,11 +184,11 @@
                </div>
                <div class="form-control">
                   <label for="list-add-gender" class="form-label">Gender</label>
-                  <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Color">
+                  <input type="text" id="list-add-gender" class="form-input" data-role="none" placeholder="Gender">
                </div>
                <div class="form-control">
                   <label for="list-add-color" class="form-label">Color</label>
-                  <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Color">
+                  <input type="text" id="list-add-color" class="form-input" data-role="none" placeholder="Color">
                </div>
                <div class="form-control">
                   <label for="list-add-breed" class="form-label">Breed</label>
@@ -207,7 +207,7 @@
 	<!-- List -->
 	<section data-role="page" id="page-list"> 
 		<header data-role="header">
-			<h1>Doggy List</h1>
+			<h1>Doggy I have Pet</h1>	
 		</header>
 		<div data-role="main">
 			<div class="flex-stretch form-control">
@@ -240,45 +240,14 @@
 					<a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
 				</div> -->
 
-			 <div class="floater bottom right">
+			 <!-- <div class="floater bottom right">
           	  <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
-        	 </div>
+        	 </div> -->
 		</div> <!-- end of main -->
 
 		<footer data-role="footer" data-template="#footer-template"></footer>
 
-		 <div class="modal" id="list-add-modal">
-         	<div class="modal-back" data-deactivate="#list-add-modal"></div>
-
-         	<form class="modal-popup form" id="list-add-form" data-ajax="false">
-
-            <div class="modal-head">
-            	<h4>Add New Doggy</h4>
-            </div>
-
-            <div class="modal-body">
-               <div class="form-control">
-                  <label for="list-add-name" class="form-label">Name</label>
-                  <input type="text" id="list-add-name" class="form-input" data-role="none" placeholder="Name">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-gender" class="form-label">Gender</label>
-                  <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Color">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-color" class="form-label">Color</label>
-                  <input type="text" id="list-add-type" class="form-input" data-role="none" placeholder="Color">
-               </div>
-               <div class="form-control">
-                  <label for="list-add-breed" class="form-label">Breed</label>
-                  <input type="text" id="list-add-breed" class="form-input" data-role="none" placeholder="Breed">
-               </div>
-            </div>
-            <div class="modal-foot">
-               <button type="submit" class="form-button">Save</button>
-            </div>
-         	</form>
-      	</div>
+		
 
 	</section>
 
@@ -306,7 +275,7 @@
 
 					<a href="#page-edit-profile" class="form-button">Edit Profile</a>
 
-					<button class="form-button js-logout" style="margin-top: 10px; background-color: var(--color-main-medium);">Log Out</button>
+					<button class="form-button js-logout" style="margin-top: 10px; color: var(--color-main-dark); background-color: var(--color-main-light);">Log Out</button>
 				</div>
 			</form>
 		</div>
@@ -345,17 +314,14 @@
 
 	<!-- Animal Profile -->
 	<section data-role="page" id="page-animal-profile"> 
-		<header data-role="header">
+		<!-- <header data-role="header">
 			<h1>Dog I've Pet</h1>
 
 			<ul>
 				<li class="back-btn"><a href="#" data-rel="back"> &lt; </a></li>
 			</ul>
 
-			<div class="more-edit">
-				<img src="img/icons/more.svg" alt="">
-			</div>
-		</header>
+		</header> -->
 		<div data-role="main" class="display-flex flex-vertical">
 			<div class="dog-image">
 				<img src="img/dog1.JPG" alt="">
@@ -365,10 +331,10 @@
 			<div class="dog-description">
 				<div class="dog-name">
 					<div class="dog-profile-name">Luna</div>
-					<div class="dog-profile-color"><strong >Color:</strong> Yellow</div>
-        			<div class="dog-profile-breed"><strong>Breed:</strong> Labrador Retriever </div>
-        			<div class="dog-profile-gender"><strong>Gender:</strong> Female </div>
-					<div class="dog-profile-info"><strong>Other:</strong> Loves playing fetch. </div>
+					<div class="dog-profile-color"><strong >Color: </strong>Yellow</div>
+        			<div class="dog-profile-breed"><strong>Breed: </strong>Labrador Retriever </div>
+        			<div class="dog-profile-gender"><strong>Gender: </strong>Female </div>
+					<div class="dog-profile-info"><strong>Unique: </strong>Has very thick neck like a bodybuilder</div>
 				</div>
 			</div>
 
@@ -378,7 +344,11 @@
          </div>
          
 				 
+				<div class="floater top left back-btn-circle">
+          	  	
+						<a href="#" data-rel="back"> &lt; </a>
 				
+        	  </div>
 
 	
 
