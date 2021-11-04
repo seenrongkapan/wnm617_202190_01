@@ -2,10 +2,27 @@
 //DOCUMENT READY
 $(()=> {
 
+	// query({
+	// 	type:'user_by_id',
+	// 	params:[3]
+	// }).then(d=>{
+ //      console.log(d)
+ //   	})
+
 	checkUserId();
 
 	//EVENT DELIGATION
 	$(document)
+
+
+	.on("pagecontainerbeforeshow",function(event, ui){
+     	switch(ui.toPage[0].id) {
+     		case "page-map": RecentPage(); break;
+     		case "page-list": ListPage(); break;
+     		case "page-user-profile": UserProfilePage(); break;
+     		case "page-animal-profile": AnimalProfilePage(); break;
+     	}
+   	})
 
 
 	//FORM SUBMIT
