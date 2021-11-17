@@ -16,6 +16,7 @@ $(()=> {
 
 
 	.on("pagecontainerbeforeshow",function(event, ui){
+		//Page Routing
      	switch(ui.toPage[0].id) {
      		case "page-map": RecentPage(); break;
      		case "page-list": ListPage(); break;

@@ -238,9 +238,9 @@ a {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: url(../img/map.png);
+	/*background-image: url(../img/map.png);
 	background-size: cover;
-	background-position: center;
+	background-position: center;*/
 }
 
 /*Circle Button*/
