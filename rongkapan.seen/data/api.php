@@ -104,7 +104,77 @@ function makeStatement($data) {
 	               ",$p);
 
 
-			default: return ["error"=>"No Matched Type"];
+			/* CREATE */ 
+
+			cast "insert_user":
+            	$r = makeQuery($c,"SELECT id FROM `track_202190_users` WHERE `username`=? OR `email` = ?",$p);
+            	if(count($r['result'])) return ["error"=>"Username or Email already exists"];
+
+            	$r = makeQuery($c,"INSERT INTO
+               		`track_202190_users`
+               	(`username`, `email`, `password`, `img`, `date_create`)
+               	VALUES
+               	(?, ?, md5(?), 'http://via.placeholder.com/400/?text=USER', NOW())
+               	",$p,false);
+            return ["id" => $c->lastInsertId()];
+
+
+			cast "insert_animal":
+				$r = makeQuery($c,"INSERT INTO
+					`track_animals`
+					(`user_id`,`name`,`breed`,`description`,`unique`,`img`,`date_create`)
+					VALUES
+					(?,?,?,?,?, 'http://via.placeholder.com/400/?text=ANIMAL', NOW())
+					",$p,false);
+				return ["id" => $c->lastInsertId()];
+
+			cast "insert_location":
+				$r = makeQuery($c,"INSERT INTO
+					`track_locations`
+					(`user_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
+					VALUES
+					(?,?,?,?, 'http://via.placeholder.com/400/?text=PHOTO','http://via.placeholder.com/400/?text=ICON', NOW())
+					",$p,false);
+				return ["id" => $c->lastInsertId()];
+					
+
+			/* UPDATE */
+
+			cast "update_user":
+				$r = makeQuery($c,"UPDATE
+					`track_users`
+					SET 
+						`username` = ?,
+						`name` = ?,
+						`email` = ?,
+					WHERE `id` = ?
+					",$p,false);
+				return ["result" => "success"];
+
+			ast "update_user_password":
+				$r = makeQuery($c,"UPDATE
+					`track_users`
+					SET 
+						`password` = md5(?),
+					WHERE `id` = ?
+					",$p,false);
+				return ["result" => "success"];
+
+
+			cast "update_animal":
+				$r = makeQuery($c,"UPDATE
+					`track_animals`
+					SET 
+						`name` = ?,
+						`breed` = ?,
+						`description` = ?,
+						`unique` = ?,
+					WHERE `id` = ?
+					",$p,false);
+				return ["result" => "success"];
+
+
+		default: return ["error"=>"No Matched Type"];
 		  	//CAN NO LONGER SEE THIS FILE ON BROWSER SOULD SHOW JUST MESSAGE ABOVE
 		}
 	} catch(Exception $e) {
