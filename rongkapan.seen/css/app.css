@@ -230,6 +230,30 @@ a {
 
 
 
+.search-bar {
+	box-shadow: none;
+	z-index: 2;
+}
+.filter-bar {
+	padding: 0.2em 0.5em;
+}
+
+
+.hotdog {
+	padding: 0.5em 1em;
+	display: inline-flex;
+	width: 100%;
+	border-radius: 2em;
+	position: relative;
+}
+	.hotdog.white {
+	background-color: var(--color-white);
+	}
+	.hotdog.medium {
+	background-color: var(--color-neutral-light);
+	}
+	.hotdog input
+
 
 
 .map {

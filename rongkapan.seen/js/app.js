@@ -49,6 +49,28 @@ $(()=> {
    	})
 
 
+   	// FORM ANCHOR CLICKS
+
+   .on("click",".js-submituseredit",function(e) {
+      e.preventDefault();
+      userEditForm();
+   })
+   .on("click",".js-submituserpassword",function(e) {
+      e.preventDefault();
+      userEditPasswordForm();
+   })
+   .on("click",".js-submitlocationform",function(e){
+      e.preventDefault();
+      locationAddForm();
+   })
+   
+
+   	// ON CHANGE
+
+   	.on("change","#location-animal-choice-select",function(e){
+      	$("#location-animal-choice").val(this.value)
+   	})
+
 
 	//ANCHOR CLICKS
 	.on("click",".js-logout",function(e) {

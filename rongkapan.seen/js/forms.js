@@ -82,3 +82,41 @@ const userEditPasswordForm = async () => {
 
    history.go(-1);
 }
+
+
+const locationAddForm = async () => {
+   let animal = $("#location-animal-choice").val();
+   let lat = $("#location-lat").val();
+   let lng = $("#location-lng").val();
+   let description = $("#location-description").val();
+
+   let r = await query({
+      type:'insert_location',
+      params:[animal,lat,lng,description]
+   });
+
+   if(r.error) throw(r.error);
+
+   history.go($("#location-navigateback").val());
+}
+
+const checkSearchForm = async (s) => {
+   let animals = await query({
+      type:'search_animals',
+      params:[s,sessionStorage.userId]
+   });
+
+   if(animals.error) throw(animals.error);
+
+   makeAnimalListSet(animals.result);
+}
+const checkFilter = async (f,v) => {
+   let animals = await query({
+      type:'filter_animals',
+      params:[f,v,sessionStorage.userId]
+   });
+
+   if(animals.error) throw(animals.error);
+
+   makeAnimalListSet(animals.result);
+}
