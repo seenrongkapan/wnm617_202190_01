@@ -278,8 +278,9 @@
 			<h1>Profile</h1>
 		</header>
 
-		<div data-role="main" class="display-flex flex-vertical">
-			<div>
+		<!-- <div data-role="main" class="display-flex flex-vertical"> -->
+		<div data-role="main" class="overscroll">
+			<!-- <div>
 				<div class="profile-pic">	</div>
 
 
@@ -298,40 +299,99 @@
 
 					<button class="form-button js-logout" style="margin-top: 10px; color: var(--color-main-dark); background-color: var(--color-main-light);">Log Out</button>
 				</div>
-			</form>
+			</form> -->
 		</div>
 
 		<footer data-role="footer" data-template="#footer-template"></footer>
 
 	</section>
 
+	<!-- Profile Settings -->
+	<section data-role="page" id="page-user-settings">
+      <header data-role="header">
+         <h1>User Edit</h1>
+         <ul>
+            <li><a href="#" data-rel="back"> &lt; </a></li>
+         </ul>
+      </header>
+      <div data-role="main" class="overscroll">
+         <ul class="nav-page-links">
+            <li><a href="#page-user-edit">Update User Info</a></li>
+            <li><a href="#page-user-edit-password">Change Password</a></li>
+            <li><a href="#page-user-upload">Change Photo</a></li>
+            <li><a href="#" class="js-logout">Logout</a></li>
+         </ul>
+      </div>
+   </section>
+
 	<!-- Edit Profile -->
-	<section data-role="page" id="page-edit-profile">
-		<header data-role="header">
-			<h1>Edit Profile</h1>
+	<section data-role="page" id="page-user-edit">
+      <header data-role="header">
+         <h1>Edit Profile</h1>
+         <ul>
+            <li><a href="#" data-rel="back"> &lt; </a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submituseredit">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         
+         <form class="fill-parent display-flex flex-vertical" id="user-edit-form" data-ajax="false">
+            <div class="flex-stretch position-relative">
+               <div class="fill-parent overscroll position-absolute padding-md">
+                  
+               </div>
+            </div>
+         </form>
+      </div>
+   </section>
 
-			<ul>
-				<li><a href="#" data-rel="back"> &lt; </a></li>
-			</ul>
-		</header>
-		<div data-role="main" class="display-flex flex-vertical">
+   <!-- Upload Profile Pic -->
+   <section data-role="page" id="page-user-upload">
+      <header data-role="header">
+         <h1>Upload Photo</h1>
+         <ul>
+            <li><a href="#" data-rel="back"> &lt; </a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submituserupload">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         <input type="hidden" id="user-upload-filename">
+         <label class="image-picker replace">
+            <input type="file" data-role="none">
+         </label>
+      </div>
+   </section>
 
-			<div>
-				<div class="profile-pic">	</div>
-				<p style="text-align: center; font-size: 0.75em; text-decoration: underline;">
-					Change Profile Picture
-				</p>
+   <section data-role="page" id="page-user-edit-password">
+      <header data-role="header">
+         <h1>Edit Password</h1>
+         <ul>
+            <li><a href="#" data-rel="back"> &lt; </a></li>
+            <li class="flex-stretch"></li>
+            <li><a href="#" class="js-submituserpassword">Save</a></li>
+         </ul>
+      </header>
+      <div data-role="main">
+         
+         <form class="fill-parent display-flex flex-vertical" id="user-edit-password-form" data-ajax="false">
+            <div class="flex-stretch position-relative">
+               <div class="fill-parent overscroll position-absolute padding-md">
+                  <div class="form-control">
+                     <label for="user-password-initial" class="form-label">Type Password</label>
+                     <input type="password" id="user-password-initial" class="form-input" data-role="none" placeholder="Type A New Password">
+                  </div>
+                  <div class="form-control">
+                     <label for="user-password-confirm" class="form-label">Confirm Password</label>
+                     <input type="password" id="user-password-confirm" class="form-input" data-role="none" placeholder="Confirm New Password">
+                  </div>
+               </div>
+            </div>
+         </form>
+      </div>
+   </section>
 
-				<h2 style="text-align: center;">Ellie Lee</h2>
-			</div>
-			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="don-edit-profile" style="padding:10px;">
-				<div class="form-control">
-					<a href="#page-user-profile" class="form-button">Save</a>
-				</div>
-			</form>
-		</div>
-	</section>
 
 	<!-- Animal Profile -->
 	<section data-role="page" id="page-animal-profile"> 

@@ -206,6 +206,30 @@ a {
 	color: var(--color-neutral-dark);
 	margin: 1rem 0 0.3rem;
 }
+.form-select select {
+    background-color: var(--color-neutral-light);
+    border-width: 0;
+    padding: 0.5em 1em;
+    font: inherit;
+    border-radius: 4px;
+    width: 100%;
+    -webkit-appearance: none;
+}
+.form-select {
+   position: relative;
+}
+.form-select::after {
+   content: '▼';
+   position: absolute;
+   right: 0.5em;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 0.8em;
+   color: var(--color-neutral-medium);
+}
+
+
+/*my own*/
 .ui-input-text, .ui-input-search{
 	background-color: white;
 	outline: 0;
@@ -226,6 +250,27 @@ a {
     padding-left: 2.5em;
     background-image: url(../img/icons/search.svg);
     background-repeat: no-repeat;
+}
+
+
+/* ANIMAL PROFILE */
+.animal-profile-top {
+   flex: none;
+   height: 40vh;
+   position: relative;
+}
+.animal-profile-bottom {
+   flex: 1 1 auto;
+   position: relative;
+}
+.animal-profile-bottom .section {
+   display: none;
+}
+.animal-profile-bottom .section.active {
+   display: block;
+}
+.animal-profile-middle li.active {
+   background-color: var(--color-main-light);
 }
 
 
@@ -252,7 +297,23 @@ a {
 	.hotdog.medium {
 	background-color: var(--color-neutral-light);
 	}
-	.hotdog input
+	.hotdog input {
+      border-width: 0;
+      background-color: transparent;
+      border-radius: 0;
+      -webkit-appearance: none;
+      font: inherit;
+      color: inherit;
+      outline: 0;
+      flex: 1 1 auto;
+      padding: 0;
+      margin: 0;
+      line-height: 1;
+   }
+   .search-bar .hotdog {
+      height: 100%;
+   }
+
 
 
 
@@ -555,6 +616,56 @@ a {
 }
 
 
+
+.search-bar {
+   box-shadow: none;
+   z-index: 2;
+   padding: 0.2em 0.5em;
+}
+.filter-bar {
+   display: flex;
+   padding: 0 1em;
+   width: 100%;
+   overflow-x: auto;
+   gap: 1em;
+}
+.filter-bar a {
+   padding: 0;
+}
+
+
+
+.image-picker.replace {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   background-position: center;
+   background-size: contain;
+   background-repeat: no-repeat;
+}
+.image-picker.replace input {
+   display: none;
+}
+
+.thumbnail {
+  position:relative;
+  display:inline-block;
+  width:6em;
+  height:6em;
+  border-radius:0.6em;
+  border:0.25em solid white;
+  vertical-align:middle;
+  box-shadow:0 0.15em 0.35em 0.1em rgba(0,0,0,0.2);
+  margin:0.5em;
+  
+  background-position:center;
+  background-size:cover;
+}
+.thumbnail input {
+   display: none;
+}
 /*.floating-header {
    position: absolute;
    background-color: rgba(255,255,255,0.15);
