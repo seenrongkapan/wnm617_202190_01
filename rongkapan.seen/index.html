@@ -179,7 +179,7 @@
 
 			<div class="floater bottom right">
             	<a href="#page-animal-add" class="btn-circle ui-link">&plus;</a>
-         	</div>
+         </div>
 
 		
 		</div>
@@ -227,18 +227,24 @@
 		<!-- <header data-role="header">
 			<h1>Doggy I have Pet</h1>	
 		</header> -->
-		<div data-role="main" class="display-flex flex-vertical">
+
+		<div data-role="main">
+			
+			<div class="list">
+				<div class="flex-stretch form-control">
+
+					<div class="search-bar header flex-none">
+            		<form data-ajax="false" id="list-search-form" class="hotdog white">
+               		<input type="search" data-role="none" placeholder="Search for a dog">
+            		</form>
+         		</div>
 			<!-- <div class="flex-stretch form-control">
 					<div class="form-search">
 						<input class="search-bar" type="search" placeholder="Search">
 
 					</div>
 			</div> -->
-			<div class="search-bar header flex-none">
-            <form data-ajax="false" id="list-search-form" class="hotdog medium">
-               <input type="search" data-role="none" placeholder="Search for a dog">
-            </form>
-         </div>
+			
 
          <div class="filter-bar header flex-none"></div>
          <div class="position-relative flex-stretch">
@@ -264,7 +270,9 @@
 			 <!-- <div class="floater bottom right">
           	  <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
         	 </div> -->
-		</div> <!-- end of main -->
+			</div> <!-- end of flex stretch -->
+		</div><!-- end of list -->
+	</div> <!-- end of main -->
 
 		<footer data-role="footer" data-template="#footer-template"></footer>
 

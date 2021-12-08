@@ -290,6 +290,7 @@ a {
 	width: 100%;
 	border-radius: 2em;
 	position: relative;
+	box-shadow: 0 3px 10px rgb(0 0 0 / 15%);
 }
 	.hotdog.white {
 	background-color: var(--color-white);

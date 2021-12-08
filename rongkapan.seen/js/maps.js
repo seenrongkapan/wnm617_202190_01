@@ -33,7 +33,7 @@ const makeMarkers = (mapEl,mapLocs) => {
 			icon: {
 				url:o.icon,
 				scaledSize: {
-					width:40
+					width:40,
 					height:40
 				}
 			}

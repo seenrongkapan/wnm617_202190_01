@@ -116,7 +116,7 @@ const AnimalAddPage = async() => {
             breed:'',
             gender:'',
             color:'',
-            description:''
+            description:'',
             uniqueness:''
         },"animal-add")
     );
