@@ -26,26 +26,18 @@
 
 //ANIMALS' DATA
 [
-  '{{repeat(10)}}',
+  '{{repeat(50)}}',
   {
     id: '{{index(1)}}',
     user_id: '{{integer(1,10)}}',
     name: '{{company()}}',
+    breed: '{{random("Golden Retreiver","Labrador Retreiver","Samoyed","Poodle","Blood Hound")}}',
+    gender: '{{random("Male","Female")}}',
     
-    gender: '{{gender()}}',
-    type: '{{random("horse","dog","cat")}}',
-    breed: function(tags) {
-      var breeds = {
-        dog:["labrador","pitbull","golden retreiver"],
-        cat:["muchkin","russian blue"],
-        bird:["parrot","sparrow"]
-      };
-      var chosen_type = breeds[this.type];
-      var chosen_index = tags.integer(0,chosen_type.length-1);
-      return chosen_type[chosen_index];
-    },
+    color: '{{random("White","Yellow","Brown","Black","Black and White")}}',
     
     description: '{{lorem(3, "sentences")}}',
+    uniqueness: '{{lorem(1, "sentences")}}',
     
     img: function(tags) {
       return 'https://via.placeholder.com/400/'+

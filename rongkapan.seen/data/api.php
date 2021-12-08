@@ -125,14 +125,24 @@ function makeStatement($data) {
 						`user_id`= ?
 						",$p);
 
+			case "filter_animals":
+            return makeQuery($c,"SELECT *
+               FROM `track_animals`
+               WHERE
+                  `$p[0]` = ? AND
+                  `user_id` = ?
+               ",[$p[1],$p[2]]);
+
+
+
 			/* CREATE */ 
 
 			case "insert_user":
-            	$r = makeQuery($c,"SELECT id FROM `track_202190_users` WHERE `username`=? OR `email` = ?",$p);
+            	$r = makeQuery($c,"SELECT id FROM `track_users` WHERE `username`=? OR `email` = ?",$p);
             	if(count($r['result'])) return ["error"=>"Username or Email already exists"];
 
             	$r = makeQuery($c,"INSERT INTO
-               		`track_202190_users`
+               		`track_users`
                	(`username`, `email`, `password`, `img`, `date_create`)
                	VALUES
                	(?, ?, md5(?), 'http://via.placeholder.com/400/?text=USER', NOW())
@@ -143,9 +153,9 @@ function makeStatement($data) {
 			case "insert_animal":
 				$r = makeQuery($c,"INSERT INTO
 					`track_animals`
-					(`user_id`,`name`,`breed`,`description`,`unique`,`img`,`date_create`)
+					(`user_id`,`name`,`breed`,`gender`,`color`,`description`,`uniqueness`,`img`,`date_create`)
 					VALUES
-					(?,?,?,?,?, 'http://via.placeholder.com/400/?text=ANIMAL', NOW())
+					(?,?,?,?,?,?,?, 'http://via.placeholder.com/400/?text=ANIMAL', NOW())
 					",$p,false);
 				return ["id" => $c->lastInsertId()];
 
@@ -160,6 +170,15 @@ function makeStatement($data) {
 					
 
 			/* UPDATE */
+			case "update_user_onboard":
+            $r = makeQuery($c,"UPDATE
+               `track_users`
+               SET
+                  `name` = ?,
+                  `img` = ?
+               WHERE `id` = ?
+               ",$p,false);
+            return ["result" => "success"];
 
 			case "update_user":
 				$r = makeQuery($c,"UPDATE
@@ -181,6 +200,14 @@ function makeStatement($data) {
 					",$p,false);
 				return ["result" => "success"];
 
+			case "update_user_image":
+            $r = makeQuery($c,"UPDATE
+               `track_users`
+               SET `img` = ?
+               WHERE `id` = ?
+               ",$p,false);
+            return ["result" => "success"];
+
 
 			case "update_animal":
 				$r = makeQuery($c,"UPDATE
@@ -188,20 +215,32 @@ function makeStatement($data) {
 					SET 
 						`name` = ?,
 						`breed` = ?,
+						`gender` = ?,
+						`color` = ?,
 						`description` = ?,
-						`unique` = ?,
+						`uniqueness` = ?,
 					WHERE `id` = ?
 					",$p,false);
 				return ["result" => "success"];
 
 			case "update_location":
             	$r = makeQuery($c,"UPDATE
-               		`track_202190_locations`
+               		`track_locations`
                		SET
                   		`description` = ?
                		WHERE `id` = ?
                		",$p,false);
             	return ["result" => "success"];
+
+
+          /* DELETE */
+         case "delete_animal":
+            $r = makeQuery($c,"DELETE FROM `track_animals` WHERE `id` = ?",$p,false);
+            return ["result" => "success"];
+
+         case "delete_location":
+            $r = makeQuery($c,"DELETE FROM `track_locations` WHERE `id` = ?",$p,false);
+            return ["result" => "success"];
 
 
 		default: return ["error"=>"No Matched Type"];

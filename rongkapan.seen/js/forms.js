@@ -2,13 +2,15 @@
 const animalAddForm = async () => {
 	let name = $("#animal-add-name").val();
 	let breed = $("#animal-add-breed").val();
-	let description = $("#animal-add-description").val();
-	let unique = $("#animal-add-unique").val();
+	let gender = $("#animal-add-gender").val();
+	let color = $("#animal-add-name").val();
+	let description = $("#animal-add-color").val();
+	let uniqueness = $("#animal-add-unique").val();
 	// console.log(name,breed,description,unique)
 
 	let r = await query({
 		type:'insert_animal',
-		params:[sessionStorage.userId,name,breed,description,unique]
+		params:[sessionStorage.userId,name,breed,gender,color,description,uniqueness]
 	});
 
 	if(r.error) throw(r.error);
@@ -21,12 +23,14 @@ const animalAddForm = async () => {
 const animalEditForm = async () => {
 	let name = $("#animal-edit-name").val();
 	let breed = $("#animal-edit-breed").val();
-	let description = $("#animal-edit-description").val();
-	let unique = $("#animal-edit-unique").val();
+	let gender = $("#animal-edit-gender").val();
+	let color = $("#animal-edit-name").val();
+	let description = $("#animal-edit-color").val();
+	let uniqueness = $("#animal-edit-unique").val();
 
 	let r = await query({
 		type:'update_animal',
-		params:[sessionStorage.userId,name,breed,description,unique]
+		params:[sessionStorage.userId,name,breed,gender,color,description,uniqueness]
 	});
 
 	if(r.error) throw(r.error);
@@ -35,21 +39,41 @@ const animalEditForm = async () => {
 }
 
 
-const userAddForm = async () => {
-	let name = $("#user-add-name").val();
-	let breed = $("#user-add-breed").val();
-	let description = $("#user-add-description").val();
-	let unique = $("#user-add-unique").val();
+const checkSignup = async () => {
+	let email = $("#signup-email").val();
+	let username = $("#signup-username").val();
+	let password = $("#signup-password").val();
+	let confirm = $("#signup-password2").val();
+
+	if(password!=confirm)
+		throw("Passwords don't match: You should handle this in some way.");
 	
 	let r = await query({
-		type:'update_animal',
-		params:[name,breed,description,unique,sessionStorage.animalId]
+		type:'insert_user',
+		params:[username,email,password]
 	});
 
 	if(r.error) throw(r.error);
 
-	history.go(-1);
+	sessionStorage.userID = r.id;
+
+	$.mobile.navigate("#page-signup2");
 }
+
+const checkSignup2 = async () => {
+   let name = $("#signup-name").val();
+   let image = $("#signup-image-name").val();
+
+   let r = await query({
+      type:'update_user_onboard',
+      params:[name,image,sessionStorage.userId]
+   });
+
+   if(r.error) throw(r.error);
+
+   $.mobile.navigate("#page-list");
+}
+
 
 
 const userEditForm = async () => {

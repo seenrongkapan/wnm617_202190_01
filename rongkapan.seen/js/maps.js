@@ -1,15 +1,18 @@
 
 const makeMap = (target="", center={ lat:37.7864, lng:-122.399650}) => {
+    await checkData(()=>window.google);
    	let mapEl = $(target);
    	
    	if(!mapEl.data("map")) {
-   		mapEl.data("map",
-   			new google.maps.Map(mapEl[0], {
+   		mapEl.data({
+            "map" : new google.maps.Map(mapEl[0], {
       			center:center,
       			zoom: 12,
-      			disableDefaultUI:true
-   			})
-   		);
+      			disableDefaultUI:true,
+                styles:mapStyles
+   			}),
+            "infoWindow": new google.maps.InfoWindow({content:''})
+   		});
 
    }
 

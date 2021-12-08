@@ -1,8 +1,8 @@
  
  const resultQuery = async (options) => {
     let {result,error} = await query(options);
-    if(error){
-        console.log(error);
+    if(error) {
+        throw(error);
         return;
     }
     return result;
@@ -10,12 +10,12 @@
 
 
  const ListPage = async() => {
- 	let result = await query({
+ 	let result = await resultQuery({
         type:'animals_by_user_id',
         params:[sessionStorage.userId]
     });
 
- 	$("#page-list .animallist").html(makeAnimalList(result));
+ 	makeAnimalListSet(animals);
  }
 
 const RecentPage = async() => {
@@ -85,7 +85,7 @@ const AnimalProfilePage = async() => {
     });
 
     let [animal] = animal_result;
-    $(".animal-profile-top img").attr("src",animal.img);
+    $(".animal-profile-top>img").attr("src",animal.img);
     $(".animal-profile-bottom .description").html(makeAnimalProfile(animal));
 
     let locations_result = await resultQuery({
@@ -113,9 +113,11 @@ const AnimalAddPage = async() => {
     $("#animal-add-form .fill-parent").html(
         makeAnimalFormInputs({
             name:'',
-            type:'',
             breed:'',
+            gender:'',
+            color:'',
             description:''
+            uniqueness:''
         },"animal-add")
     );
 }
@@ -145,4 +147,5 @@ const LocationChooseAnimalPage = async() => {
             name:'location-animal-choice-select'
         })
     );
+     $("#location-animal-choice").val(result[0].id);
 }

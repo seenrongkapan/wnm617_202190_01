@@ -1,6 +1,6 @@
 
 //DOCUMENT READY
-$(()=> {
+$(()=>{
 
 	// query({
 	// 	type:'user_by_id',
@@ -24,29 +24,42 @@ $(()=> {
      		case "page-user-edit": UserEditPage(); break;
      		case "page-animal-profile": AnimalProfilePage(); break;
      		case "page-animal-edit": AnimalEditPage(); break;
-         	case "page-animal-add": AnimalAddPage(); break;
-         	case "page-location-set-location": LocationSetLocationPage(); break;
+         case "page-animal-add": AnimalAddPage(); break;
+         case "page-location-set-location": LocationSetLocationPage(); break;
      	}
    	})
 
 
 	//FORM SUBMIT
 	.on("submit","#signin-form",function(e) {
-		e.preventDefault();
-		checkSigninForm();
-	})
-	.on("submit","#list-add-form",function(e) {
       e.preventDefault();
-   	})
+      checkSigninForm();
+   })
 
-   	.on("submit", "#animal-add-form", function(e) {
+   .on("submit", "#signup-form", function(e) {
+      e.preventDefault();
+      checkSignup();
+   })
+   .on("submit", "#signup-form2", function(e) {
+      e.preventDefault();
+      checkSignup2();
+   })
+
+   .on("submit", "#animal-add-form", function(e) {
       e.preventDefault();
       animalAddForm();
-   	})
-   	.on("submit", "#animal-edit-form", function(e) {
+   })
+   .on("submit", "#animal-edit-form", function(e) {
       e.preventDefault();
       animalEditForm();
-   	})
+   })
+
+
+   .on("submit", "#list-search-form", function(e) {
+      e.preventDefault();
+      let s = $(this).find("input").val();
+      checkSearchForm(s);
+   })
 
 
    	// FORM ANCHOR CLICKS
@@ -62,6 +75,55 @@ $(()=> {
    .on("click",".js-submitlocationform",function(e){
       e.preventDefault();
       locationAddForm();
+   })
+
+   .on("click","[data-filter]",function(e){
+      let {filter,value} = $(this).data();
+      if(value=="") ListPage();
+      else checkFilter(filter,value);
+   })
+
+   .on("change",".image-picker input",function(e){
+      checkUpload(this.files[0])
+      .then(d=>{
+         console.log(d);
+         $(this).parent().prev().val("uploads/"+d.result);
+         $(this).parent().css({
+            "background-image":`url(uploads/${d.result})`
+         });
+      })
+   })
+   .on("click",".js-submituserupload",function(e) {
+      let image = $("#user-upload-filename").val();
+      query({
+         type:"update_user_image",
+         params: [image,sessionStorage.userId]
+      }).then(d=>{
+         if(d.error) throw(d.error);
+
+         history.go(-1);
+      })
+   })
+   .on("click",".js-submitanimalupload",function(e) {
+      let image = $("#animal-upload-filename").val();
+      query({
+         type:"update_animal_image",
+         params: [image,sessionStorage.animalId]
+      }).then(d=>{
+         if(d.error) throw(d.error);
+
+         history.go(-1);
+      })
+   })
+
+
+   .on("click",".js-animal-delete",function(e){
+      query({
+         type:"delete_animal",
+         params: [sessionStorage.animalId]
+      }).then(d=>{
+         history.go(-2);
+      })
    })
    
 

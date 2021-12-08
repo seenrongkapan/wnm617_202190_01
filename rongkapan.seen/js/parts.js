@@ -7,8 +7,8 @@ const makeAnimalList = templater((o)=>`
       </div>
       <div class="flex-stretch animallist-item-body padding-md">
          <div class="animallist-item-name">${o.name}</div>
-         <div class="animallist-item-type"><strong>Color:</strong> ${o.color}</div>
          <div class="animallist-item-breed"><strong>Breed:</strong> ${o.breed}</div>
+         <div class="animallist-item-color"><strong>Color:</strong> ${o.color}</div>
       </div>
    </a>
 </div>
@@ -30,9 +30,11 @@ const makeUserProfile = (o) => `
 const makeAnimalProfile = (o) => `
 <div>
    <h2>${o.name}</h2>
-   <div><strong>type</strong> ${o.type}</div>
-   <div><strong>breed</strong> ${o.breed}</div>
-   <div><strong>description</strong> <p>${o.description}</p></div>
+   <div><strong>Breed</strong> ${o.breed}</div>
+   <div><strong>Gender</strong> ${o.gender}</div>
+   <div><strong>Color</strong> ${o.color}</div>
+   <div><strong>Description</strong> <p>${o.description}</p></div>
+   <div><strong>Uniqueness</strong> <p>${o.uniqueness}</p></div>
 </div>
 `;
 
@@ -43,8 +45,8 @@ const makeAnimalPopup = o => `
    </div>
    <div class="flex-stretch animal-popup-body padding-md">
       <div class="animal-popup-name">${o.name}</div>
-      <div class="animal-popup-type"><strong>Type</strong> ${o.type}</div>
       <div class="animal-popup-breed"><strong>Breed</strong> ${o.breed}</div>
+      <div class="animal-popup-color"><strong>Color</strong> ${o.color}</div>
    </div>
 </div>
 `;
@@ -70,7 +72,7 @@ ${FormControlInput({
    name:"name",
    displayname:"Name",
    type:"text",
-   placeholder:"Type The Animal Name",
+   placeholder:"Type The Dog Name",
    value:o.name
 })}
 ${FormControlInput({
@@ -78,7 +80,7 @@ ${FormControlInput({
    name:"breed",
    displayname:"Breed",
    type:"text",
-   placeholder:"Type The Animal Breed",
+   placeholder:"Type The Dog Breed",
    value:o.breed
 })}
 ${FormControlInput({
@@ -86,22 +88,22 @@ ${FormControlInput({
    name:"color",
    displayname:"Color",
    type:"text",
-   placeholder:"Type The Animal Color",
+   placeholder:"Type The Dog Color",
    value:o.color
 })}
 ${FormControlTextarea({
    namespace:namespace,
    name:"description",
    displayname:"Description",
-   placeholder:"Type The Animal Description",
+   placeholder:"Type The Dog Description",
    value:o.description
 })}
 ${FormControlTextarea({
    namespace:namespace,
-   name:"unique",
+   name:"uniqueness",
    displayname:"Uniqueness",
-   placeholder:"Type The Animal Uniqueness",
-   value:o.unique
+   placeholder:"Type The Dog Uniqueness",
+   value:o.uniqueness
 })}
 `;
 
@@ -112,7 +114,7 @@ ${FormControlInput({
    name:"name",
    displayname:"Name",
    type:"text",
-   placeholder:"Type The User Name",
+   placeholder:"Type Your Name",
    value:o.name
 })}
 ${FormControlInput({
@@ -120,7 +122,7 @@ ${FormControlInput({
    name:"username",
    displayname:"Username",
    type:"text",
-   placeholder:"Type The User Handle",
+   placeholder:"Type Your Username",
    value:o.username
 })}
 ${FormControlInput({
@@ -128,7 +130,7 @@ ${FormControlInput({
    name:"email",
    displayname:"Email",
    type:"email",
-   placeholder:"Type The Email Address",
+   placeholder:"Type Your Email Address",
    value:o.email
 })}
 `;
@@ -145,13 +147,15 @@ const makeAnimalChoiceSelect = ({animals,name,chosen=0}) => `
 
 
 const makeAnimalListSet = (arr,target="#page-list .animallist") => {
+   $(".filter-bar").html(makeFilterList(arr));
    $(target).html(makeAnimalList(arr));
 }
 
+const capitalize = s => s[0].toUpperCase()+s.substr(1);
 
 const filterList = (animals,type) => {
    let a = [...(new Set(animals.map(o=>o[type])))];
-   return templater(o=>`<a href="#" data-filter="${type}" data-value="${o}">${o}</a>`)(a);
+   return templater(o=>o?`<a href="#" data-filter="${type}" data-value="${o}">${capitalize(o)}</a>`:'')(a);
 }
 
 
@@ -159,8 +163,10 @@ const makeFilterList = (animals) => {
    return `
    <a href="#" data-filter="type" data-value="">All</a>
    <div>|</div>
-   ${filterList(animals,'type')}
-   <div>|</div>
    ${filterList(animals,'breed')}
+   <div>|</div>
+   ${filterList(animals,'color')}
+   <div>|</div>
+   ${filterList(animals,'gender')}
    `;
 }
