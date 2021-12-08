@@ -166,7 +166,5 @@ const makeFilterList = (animals) => {
    ${filterList(animals,'breed')}
    <div>|</div>
    ${filterList(animals,'color')}
-   <div>|</div>
-   ${filterList(animals,'gender')}
    `;
 }

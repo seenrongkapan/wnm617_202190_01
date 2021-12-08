@@ -10,7 +10,7 @@
 
 
  const ListPage = async() => {
- 	let result = await resultQuery({
+ 	let animals = await resultQuery({
         type:'animals_by_user_id',
         params:[sessionStorage.userId]
     });

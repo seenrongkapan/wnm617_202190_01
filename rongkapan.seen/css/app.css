@@ -273,16 +273,27 @@ a {
    background-color: var(--color-main-light);
 }
 
-
-
 .search-bar {
-	box-shadow: none;
-	z-index: 2;
+   box-shadow: none;
+   z-index: 2;
+   padding: 0.2em 0.85em;
 }
 .filter-bar {
-	padding: 0.2em 0.5em;
+   display: flex;
+   padding: 0 1em;
+   width: 100%;
+   overflow-x: auto;
+   gap: 1em;
+}
+.filter-bar a {
+   padding: 0;
 }
 
+
+/*.filter-bar {
+	padding: 0.2em 0.5em;
+}
+*/
 
 .hotdog {
 	padding: 0.5em 1em;
@@ -618,21 +629,7 @@ a {
 
 
 
-.search-bar {
-   box-shadow: none;
-   z-index: 2;
-   padding: 0.2em 0.5em;
-}
-.filter-bar {
-   display: flex;
-   padding: 0 1em;
-   width: 100%;
-   overflow-x: auto;
-   gap: 1em;
-}
-.filter-bar a {
-   padding: 0;
-}
+
 
 
 
@@ -676,4 +673,8 @@ a {
    box-shadow: none;
 }*/
 
+
+.next-button {
+	
+}
  

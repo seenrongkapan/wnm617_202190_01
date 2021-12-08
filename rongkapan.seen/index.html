@@ -160,25 +160,20 @@
 	<!-- Map -->
 	<section data-role="page" id="page-map">
 		<div data-role="main">
-			
-			<div class="map">
-				<div class="flex-stretch form-control">
+			<div class="flex-stretch form-control">
 
 					<div class="search-bar header flex-none">
-            		<form data-ajax="false" id="map-search-form" class="hotdog medium">
+            		<form data-ajax="false" id="map-search-form" class="hotdog white">
                		<input type="search" data-role="none" placeholder="Search for a dog">
             		</form>
          		</div>
-					<!-- <div class="form-search">
-						<span class="icon"><img src="/img/icon/search.svg" alt=""></span>
-						<input class="search-bar" type="search" placeholder="Search">
-
-					</div> -->
 				</div>
+			<div class="map">
+				
 			</div>
 
 			<div class="floater bottom right">
-            	<a href="#page-animal-add" class="btn-circle ui-link">&plus;</a>
+            	<a href="#page-location-choose-animal" class="btn-circle ui-link">&plus;</a>
          </div>
 
 		
@@ -498,18 +493,24 @@
       <header data-role="header">
          <h1>Choose Animal</h1>
          <ul>
-            <li><a href="#" data-rel="back">Back</a></li>
+            <li><a href="#" data-rel="back">&lt;</a></li>
             <li class="flex-stretch"></li>
-            <li><a href="#page-location-set-location">Next</a></li>
+            <li class="next-button"><a href="#page-location-set-location">Next</a></li>
          </ul>
       </header>
       <div data-role="main" style="padding:1em">
          <input type="hidden" id="location-animal-choice">
-         <div>
+        <!--  <div>
             <a href="#page-animal-add">Make a new animal</a>
-         </div>
-         <p>Or</p>
+         </div> -->
+        
          <div class="form-select location-animal-choice-select"></div>
+
+          <p style="text-align: center;">------------- Or ------------</p>
+
+         <div class="form-control">
+         	<a href="#page-animal-add" class="form-button">Add a New Dog</a>
+         </div>
       </div>
    </section>
 

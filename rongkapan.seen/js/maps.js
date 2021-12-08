@@ -1,5 +1,5 @@
 
-const makeMap = (target="", center={ lat:37.7864, lng:-122.399650}) => {
+const makeMap = async (target="", center={ lat:37.7864, lng:-122.399650}) => {
     await checkData(()=>window.google);
    	let mapEl = $(target);
    	
@@ -20,14 +20,14 @@ const makeMap = (target="", center={ lat:37.7864, lng:-122.399650}) => {
 }
 
 const makeMarkers = (mapEl,mapLocs) => {
-	let {map,markers} = map.El.data();
+	let {map,markers} = mapEl.data();
 
 	if(markers) markers.forEach(o=>o.setMap(null));
 
 	markers = [];
 
 	mapLocs.forEach(o=>{
-		let m = new google.maps.marker({
+		let m = new google.maps.Marker({
 			position: o,
 			map,
 			icon: {
