@@ -87,7 +87,7 @@
 				<h2 style="text-align: center; color: var(--color-main-dark);">
 					Create a New Account
 				</h2>
-				<form data-ajax="false" class="form" id="signup-form" style="padding:10px;">
+				<form data-ajax="false" class="form signin-form" id="signup-form" style="padding:10px;">
 
 					<div class="form-control">
 						<label for="signup-email" class="form-label">Email Address</label>
@@ -105,17 +105,14 @@
 					</div>
 
 					<div class="form-control">
-						<label for="signup-password" class="form-label">Confirm Password</label>
+						<label for="signup-password2" class="form-label">Confirm Password</label>
 						<input class="form-input" type="password" id="signup-password-2" data-role="none" placeholder="Confirm Password">
 					</div>
 
-					<form data-ajax="false" class="form" id="edit-profile" style="padding:10px;">
-						<div class="form-control">
-
-						<a href="#page-signin" class="form-button" style="background-color: var(--color-main-dark);">Sign Up</a>
-
-					</div>
-					</form>
+					<div class="form-control">
+               	<input type="submit" value="Sign Up" class="form-button" data-role="none">
+            	</div>
+					
 
 					<div class="form-control">
 					
@@ -131,6 +128,28 @@
 
 		</div>
 	</section>
+
+	<section data-role="page" id="page-signup2">
+      <div data-role="main" class="display-flex flex-vertical">
+         <div class="flex-stretch"></div>
+         <form data-ajax="false" class="form signin-form" id="signup-form2" style="padding:10px">
+            <div class="form-control">
+               <label for="signup-name" class="form-label">Name</label>
+               <input class="form-input" type="text" id="signup-name" data-role="none" placeholder="Your Name">
+            </div>
+            <div class="form-control">
+               <input type="hidden" id="signup-image-name">
+               <label class="image-picker thumbnail">
+                  <input type="file" data-role="none">
+               </label>
+            </div>
+            <div class="form-control">
+               <input type="submit" value="Start" class="form-button" data-role="none">
+            </div>
+         </form>
+         <div class="flex-stretch"></div>
+      </div>
+   </section>
 
 	<!-- Onboarding 1 -->
 	<section data-role="page" id="page-onboarding-1">
@@ -398,45 +417,61 @@
 
 	<!-- Animal Profile -->
 	<section data-role="page" id="page-animal-profile"> 
-		<!-- <header data-role="header">
+		<header data-role="header">
 			<h1>Dog I've Pet</h1>
 
 			<ul>
 				<li class="back-btn"><a href="#" data-rel="back"> &lt; </a></li>
+				<li class="flex-stretch"></li>
+            <li><a href="#page-animal-edit">Edit</a></li>  
 			</ul>
 
-		</header> -->
+		</header>
 		<div data-role="main" class="display-flex flex-vertical">
-			<div class="dog-image">
-				<img src="img/dog1.JPG" alt="">
-				
-			</div> <!-- end dog image -->
+			<div class="animal-profile-top">
 
-			<div class="dog-description">
-				<div class="dog-name">
-					<div class="dog-profile-name">Luna</div>
-					<div class="dog-profile-color"><strong >Color: </strong>Yellow</div>
-        			<div class="dog-profile-breed"><strong>Breed: </strong>Labrador Retriever </div>
-        			<div class="dog-profile-gender"><strong>Gender: </strong>Female </div>
-					<div class="dog-profile-info"><strong>Unique: </strong>Has very thick neck like a bodybuilder</div>
-				</div>
-			</div>
+				<img src="https://via.placeholder.com/600x600?text=Animal" alt="" style="width:100%;height:100%;object-fit:cover">
+				<div class="floater bottom right">
+               <a href="#page-animal-edit-upload" style="font-size:1.25em">
+                  <img src="img/icons/pencil.svg" class="icon">
+               </a>
+            </div>
+				
+			</div> <!-- end profile top -->
 
 			<div class="animal-profile-bottom">
-            <div class="map"></div>
-           <!--  <form data-ajax="false" class="form floater" id="edit-dog-info" style="padding:10px; z-index: 2;"> -->
+            <div class="section active">
+               <div class="map"></div>
+               <div class="floater bottom right">
+                  <a href="#page-location-set-location" class="btn-circle js-chooseanimal" data-setnavigateback="-2">&plus;</a>
+               </div>
+            </div>
+            <div class="section">
+               <div class="description"></div>
+            </div>
          </div>
-         
-				 
-				<div class="floater top left back-btn-circle">
-          	  	
-						<a href="#" data-rel="back"> &lt; </a>
-				
-        	  </div>
-
-	
+      </div>
 
 	</section>
+
+
+	<section data-role="page" id="page-animal-edit-upload">
+	      <header data-role="header">
+	         <h1>Upload Photo</h1>
+	         <ul>
+	            <li><a href="#" data-rel="back">Back</a></li>
+	            <li class="flex-stretch"></li>
+	            <li><a href="#" class="js-submitanimalupload">Save</a></li>
+	         </ul>
+	      </header>
+	      <div data-role="main">
+	         <input type="hidden" id="animal-upload-filename">
+	         <label class="image-picker replace">
+	            <input type="file" data-role="none">
+	         </label>
+	      </div>
+	</section>
+
 
 	<!-- Add New -->
 	<section data-role="page" id="page-animal-add">

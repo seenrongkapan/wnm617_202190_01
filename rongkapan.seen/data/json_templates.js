@@ -53,7 +53,7 @@
   '{{repeat(250)}}',
   {
     id: '{{index(1)}}',
-    animal_id: '{{integer(1,10)}}',
+    animal_id: '{{integer(1,50)}}',
 
     lat: '{{floating(37.804355, 37.672078)}}',
     lng: '{{floating(-122.487251, -122.375356)}}',
