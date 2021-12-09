@@ -519,15 +519,15 @@ a {
 
 
 /*PROFILE*/
-.profile-pic {
+.user-profile-image {
 	background-color: var(--color-neutral-light);
 	height: 25vh;
    width: 25vh;
    border-radius: 7em;
-   margin: 3.4em auto 2em;
-   background-image: url(../img/profile-pic.png);
-   background-size: cover;
-	background-position: center;
+/*   margin: 3.4em auto 2em;*/
+   /*background-image: url(../img/profile-pic.png);
+   background-size: cover;*/
+	/*background-position: center;*/
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
 }
 .profile-detail {
@@ -675,6 +675,6 @@ a {
 
 
 .next-button {
-	
+
 }
  

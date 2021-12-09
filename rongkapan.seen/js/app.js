@@ -26,6 +26,7 @@ $(()=>{
      		case "page-animal-edit": AnimalEditPage(); break;
          case "page-animal-add": AnimalAddPage(); break;
          case "page-location-set-location": LocationSetLocationPage(); break;
+         case "page-location-choose-animal": LocationChooseAnimalPage(); break;
      	}
    	})
 

@@ -80,7 +80,7 @@ function makeStatement($data) {
 
 
 			case "user_by_id":
-				return makeQuery($c,"SELECT id,username,name,email FROM `track_users` WHERE `id`=?",$p);
+				return makeQuery($c,"SELECT id,username,name,email,img FROM `track_users` WHERE `id`=?",$p);
 			case "animal_by_id":
 				return makeQuery($c,"SELECT * FROM `track_animals` WHERE `id`=?",$p);
 			case "location_by_id":
@@ -147,7 +147,8 @@ function makeStatement($data) {
                	VALUES
                	(?, ?, md5(?), 'http://via.placeholder.com/400/?text=USER', NOW())
                	",$p,false);
-            return ["id" => $c->lastInsertId()];
+				$r['id'] = $c->lastInsertId();
+				return $r;
 
 
 			case "insert_animal":
@@ -157,16 +158,18 @@ function makeStatement($data) {
 					VALUES
 					(?,?,?,?,?,?,?, 'http://via.placeholder.com/400/?text=ANIMAL', NOW())
 					",$p,false);
-				return ["id" => $c->lastInsertId()];
+				$r['id'] = $c->lastInsertId();
+				return $r;
 
 			case "insert_location":
 				$r = makeQuery($c,"INSERT INTO
 					`track_locations`
-					(`user_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
+					(`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
 					VALUES
 					(?,?,?,?, 'http://via.placeholder.com/400/?text=PHOTO','http://via.placeholder.com/400/?text=ICON', NOW())
 					",$p,false);
-				return ["id" => $c->lastInsertId()];
+				$r['id'] = $c->lastInsertId();
+				return $r;
 					
 
 			/* UPDATE */

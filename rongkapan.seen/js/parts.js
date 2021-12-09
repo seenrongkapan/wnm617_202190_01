@@ -1,7 +1,7 @@
 
 const makeAnimalList = templater((o)=>`
 <div class="animallist-item">
-	<a href="#page-animal-profile" class="display-flex" data-id="${o.id}">
+	<a href="#" class="display-flex animal-jump" data-id="${o.id}">
       <div class="flex-none animallist-item-image">
          <img src="${o.img}" alt="">
       </div>
@@ -16,8 +16,10 @@ const makeAnimalList = templater((o)=>`
 
 
 const makeUserProfile = (o) => `
+<div class="display-flex flex-vertical">
 <div class="user-profile-image">
    <img src="${o.img}" alt="">
+</div>
 </div>
 <div>
    <h2>${o.name}</h2>
@@ -83,6 +85,10 @@ ${FormControlInput({
    placeholder:"Type The Dog Breed",
    value:o.breed
 })}
+<select id="${namespace}-gender" data-role="none">
+   <option>Female</option>
+   <option>Male</option>
+</select>
 ${FormControlInput({
    namespace:namespace,
    name:"color",

@@ -244,10 +244,10 @@
 
 		<div data-role="main">
 			
-			<div class="list">
-				<div class="flex-stretch form-control">
+			<div class="list" style="position: relative; display: flex; flex-direction: column; height: 100%; ">
+				
 
-					<div class="search-bar header flex-none">
+					<div class="search-bar header flex-none" style="padding-top: 1em; padding-bottom: 1em;">
             		<form data-ajax="false" id="list-search-form" class="hotdog white">
                		<input type="search" data-role="none" placeholder="Search for a dog">
             		</form>
@@ -261,7 +261,7 @@
 			
 
          <div class="filter-bar header flex-none"></div>
-         <div class="position-relative flex-stretch">
+         <div class="position-relative flex-stretch" style="position: relative; flex: 1 1 100%;">
 				<div class="overscroll floater fill-parent">
 					<div class="animallist">
 					
@@ -284,7 +284,7 @@
 			 <!-- <div class="floater bottom right">
           	  <a href="#" class="btn-circle" data-activate="#list-add-modal">&plus;</a>
         	 </div> -->
-			</div> <!-- end of flex stretch -->
+			
 		</div><!-- end of list -->
 	</div> <!-- end of main -->
 
@@ -296,9 +296,9 @@
 
 	<!-- Profile -->
 	<section data-role="page" id="page-user-profile">
-		<header data-role="header">
+		<!-- <header data-role="header">
 			<h1>Profile</h1>
-		</header>
+		</header> -->
 
 		<!-- <div data-role="main" class="display-flex flex-vertical"> -->
 		<div data-role="main" class="overscroll">
