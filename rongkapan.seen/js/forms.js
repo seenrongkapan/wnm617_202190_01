@@ -5,7 +5,7 @@ const animalAddForm = async () => {
 	let gender = $("#animal-add-gender").val();
 	let color = $("#animal-add-name").val();
 	let description = $("#animal-add-color").val();
-	let uniqueness = $("#animal-add-unique").val();
+	let uniqueness = $("#animal-add-uniqueness").val();
 	// console.log(name,breed,description,unique)
 
 	let r = await query({
@@ -26,7 +26,7 @@ const animalEditForm = async () => {
 	let gender = $("#animal-edit-gender").val();
 	let color = $("#animal-edit-name").val();
 	let description = $("#animal-edit-color").val();
-	let uniqueness = $("#animal-edit-unique").val();
+	let uniqueness = $("#animal-edit-uniqueness").val();
 
 	let r = await query({
 		type:'update_animal',
@@ -43,7 +43,7 @@ const checkSignup = async () => {
 	let email = $("#signup-email").val();
 	let username = $("#signup-username").val();
 	let password = $("#signup-password").val();
-	let confirm = $("#signup-password2").val();
+	let confirm = $("#signup-password-2").val();
 
 	if(password!=confirm)
 		throw("Passwords don't match: You should handle this in some way.");
@@ -53,9 +53,9 @@ const checkSignup = async () => {
 		params:[username,email,password]
 	});
 
-	if(r.error) throw(r.error);
+	if(r.error) throw(r.error); 
 
-	sessionStorage.userID = r.id;
+	sessionStorage.userId = r.id;
 
 	$.mobile.navigate("#page-signup2");
 }

@@ -133,48 +133,25 @@
       <div data-role="main" class="display-flex flex-vertical">
          <div class="flex-stretch"></div>
          <form data-ajax="false" class="form signin-form" id="signup-form2" style="padding:10px">
-            <div class="form-control">
-               <label for="signup-name" class="form-label">Name</label>
-               <input class="form-input" type="text" id="signup-name" data-role="none" placeholder="Your Name">
-            </div>
-            <div class="form-control">
+         	<div class="form-control">
                <input type="hidden" id="signup-image-name">
                <label class="image-picker thumbnail">
                   <input type="file" data-role="none">
                </label>
             </div>
             <div class="form-control">
-               <input type="submit" value="Start" class="form-button" data-role="none">
+               <label for="signup-name" class="form-label">Name</label>
+               <input class="form-input" type="text" id="signup-name" data-role="none" placeholder="Your Name">
+            </div>
+            
+            <div class="form-control">
+               <input type="submit" value="Done" class="form-button" data-role="none">
             </div>
          </form>
          <div class="flex-stretch"></div>
       </div>
    </section>
 
-	<!-- Onboarding 1 -->
-	<section data-role="page" id="page-onboarding-1">
-		<div data-role="main" class="display-flex flex-vertical">
-			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="onboarding-1" style="padding:10px;">
-
-				<div class="form-control">
-					<a href="#page-onboarding-2" class="form-button">Next</a>
-				</div>
-			</form>
-		</div>
-	</section>
-
-	<!-- Onboarding 2 -->
-	<section data-role="page" id="page-onboarding-2">
-		<div data-role="main" class="display-flex flex-vertical">
-			<div class="flex-stretch"></div>
-			<form data-ajax="false" class="form" id="onboarding-2" style="padding:10px;">
-				<div class="form-control">
-					<a href="#page-map" class="form-button">Done</a>
-				</div>
-			</form>
-		</div>
-	</section>
 
 	<!-- Map -->
 	<section data-role="page" id="page-map">
@@ -439,15 +416,23 @@
 				
 			</div> <!-- end profile top -->
 
+			<div class="animal-profile-middle">
+            <ul class="nav">
+               <li class="active">Description</li>
+               <li>Location</li>
+            </ul>
+         </div>
+
 			<div class="animal-profile-bottom">
             <div class="section active">
+            	<div class="description"></div>
+               
+            </div>
+            <div class="section">
                <div class="map"></div>
                <div class="floater bottom right">
                   <a href="#page-location-set-location" class="btn-circle js-chooseanimal" data-setnavigateback="-2">&plus;</a>
                </div>
-            </div>
-            <div class="section">
-               <div class="description"></div>
             </div>
          </div>
       </div>

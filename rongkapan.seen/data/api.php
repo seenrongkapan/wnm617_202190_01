@@ -138,7 +138,8 @@ function makeStatement($data) {
 			/* CREATE */ 
 
 			case "insert_user":
-            	$r = makeQuery($c,"SELECT id FROM `track_users` WHERE `username`=? OR `email` = ?",$p);
+            	$r = makeQuery($c,"SELECT id FROM `track_users` WHERE `username`=? OR `email` = ?",[$p[0],$p[1]]);
+            	if(isset($r['error'])) return $r;
             	if(count($r['result'])) return ["error"=>"Username or Email already exists"];
 
             	$r = makeQuery($c,"INSERT INTO
@@ -166,7 +167,7 @@ function makeStatement($data) {
 					`track_locations`
 					(`animal_id`,`lat`,`lng`,`description`,`photo`,`icon`,`date_create`)
 					VALUES
-					(?,?,?,?, 'http://via.placeholder.com/400/?text=PHOTO','http://via.placeholder.com/400/?text=ICON', NOW())
+					(?,?,?,?, 'http://via.placeholder.com/400/?text=PHOTO','http://via.placeholder.com/400/?text=DOG', NOW())
 					",$p,false);
 				$r['id'] = $c->lastInsertId();
 				return $r;
