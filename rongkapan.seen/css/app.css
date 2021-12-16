@@ -137,7 +137,7 @@ a {
 
 [data-role="header"] a {
    padding: 0 0.7em;
-   font-size: 1.5em;
+   font-size: 1em;
 }
 
 
@@ -182,6 +182,8 @@ a {
 	outline: 0;
 	font: inherit;
 }
+
+
 .ui-input-btn,
 .form .form-button, 
 .form-button {
@@ -272,6 +274,13 @@ a {
 .animal-profile-middle li.active {
    background-color: var(--color-main-light);
 }
+.js-animal-delete {
+	text-decoration: underline;
+}
+
+#animal-add-gender {
+
+}
 
 .search-bar {
    box-shadow: none;
@@ -281,7 +290,7 @@ a {
 .filter-bar {
    display: flex;
    padding: 0 1em;
-   padding-bottom: 1.2em;
+   padding-bottom: 1.0.5em;
    width: 100%;
    overflow-x: auto;
    gap: 1em;
@@ -367,6 +376,19 @@ a {
 	text-align: center;
 	font-size: 1.75rem;
 	border-radius: 2em;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
+}
+
+.image-btn-circle {
+	display: inline-block;
+	background-color: rgba(255, 255, 255, 0.9);
+	width: 2.85rem;
+	height: 2.85rem;
+	line-height: 2rem;
+	text-align: center;
+	font-size: 1.5em;
+	border-radius: 2em;
+	padding-top: 0.45rem;
 	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.15);
 }
 
@@ -525,21 +547,40 @@ a {
 	height: 30vh;
    width: 30vh;
    border-radius: 10em;
-/*   margin: 3.4em auto 2em;*/
-   /*background-image: url(../img/profile-pic.png);
-   background-size: cover;*/
-	/*background-position: center;*/
+	background-position: center;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.35);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
+
 
 .user-profile-image{
 	margin: auto;
 	padding-top: 2.5em;
+	background-size: cover;
+	background-position: center;
 }
 .profile-detail {
 	text-align: center;
 }
-
+.user-profile-name {
+	color: var(--color-main-dark);
+	font-size: 2em;
+}
+.nav-page-links{
+	margin-block-start: 0.25em;
+	padding-inline-start: 0;
+}
+.nav-page-links li {
+	list-style: none;
+	font-size: 1.2em;
+	line-height: 3em;
+	padding: 0.25em 0;
+	border-bottom: solid 0.5px var(--color-neutral-medium);
+}
+.nav-page-links a {
+	padding-left: 1em;
+}
 
 
 
@@ -589,12 +630,14 @@ a {
 .animallist-item-description {
 }
 .animallist-item-name {
-   font-size: 1em;
+   font-size: 1.15em;
    font-weight: 700;
    margin-bottom: 0.25em;
+   color: var(--color-main-dark);
 }
 .animallist-item-type,
-.animallist-item-breed {
+.animallist-item-breed,
+.animallist-item-color {
    font-size: 0.85em;
 }
 
@@ -613,16 +656,22 @@ a {
 	vertical-align: middle;
 }
 .dog-description {
-	padding: 1em 2em 1em 2em;
+	padding-top: 0.85em;
+}
+.dog-description p {
+	margin-top: 0.4em;
+	margin-bottom: 0.85em;
 }
 .dog-profile-name{
 	 font-size: 1.65em;
     font-weight: 700;
-    margin-bottom: .25em;
+    margin-top: 0;
+    margin-bottom: 0.55em;
     color: var(--color-main-dark);
+    padding-top: 0.25em;
 }
 .dog-profile-color, .dog-profile-breed, .dog-profile-gender, .dog-profile-info {
-	font-size: 0.85em;
+	font-size: 1em;
 }
 .dog-profile-color, .dog-profile-breed, .dog-profile-gender {
 	margin-bottom: 0.5em;
@@ -648,8 +697,12 @@ a {
 .animal-profile-bottom .section.active {
    display: block;
 }
+.animal-profile-middle li {
+	background-color: var(--color-neutral-light);
+}
 .animal-profile-middle li.active {
    background-color: var(--color-main-light);
+   font-weight: 700;
 }
 
 
@@ -670,17 +723,56 @@ a {
 
 
 
+.back-btn {
+	font-size: 1.5em;
+}
 
-.image-picker.replace {
+
+/*.image-picker.replace {
    position: absolute;
    top: 0;
    left: 0;
-   width: 100%;
+   width: 90%;
    height: 100%;
    background-position: center;
    background-size: contain;
    background-repeat: no-repeat;
+}*/
+
+.replace-profile{
+	background-color: var(--color-neutral-light);
+	height: 30vh;
+   width: 30vh;
+   border-radius: 10em;
+   vertical-align:middle;
+	box-shadow:0 0.15em 0.35em 0.1em rgba(0,0,0,0.2);
+	margin: 2em;
+	background-image: url(../img/plus.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
 }
+
+.replace {
+  position:relative;
+  display:inline-block;
+  width:15em;
+  height:15em;
+  margin: auto;
+  border-radius:0.85em;
+  /*border:0.25em solid white;*/
+  vertical-align:middle;
+  box-shadow:0 0.15em 0.35em 0.1em rgba(0,0,0,0.2);
+  margin:0.5em;
+  background-position:center;
+  background-size:cover;
+  background-image: url(../img/plus.png);
+  background-color: var(--color-neutral-light);
+ }
+.image-picker.replace-profile input {
+   display: none;
+}
+
 .image-picker.replace input {
    display: none;
 }
@@ -695,7 +787,8 @@ a {
   vertical-align:middle;
   box-shadow:0 0.15em 0.35em 0.1em rgba(0,0,0,0.2);
   margin:0.5em;
-  
+  background-image: url(../img/plus.png);
+  background-color: var(--color-neutral-light);
   background-position:center;
   background-size:cover;
 }
@@ -719,7 +812,7 @@ a {
 
 .description {
 	padding-top: 0.5em;
-	padding-left: 1.25em;
+	padding-right: 1.05em;
 	padding-left: 1.25em;
 	padding-bottom: 1em;
 }

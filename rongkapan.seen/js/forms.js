@@ -3,8 +3,8 @@ const animalAddForm = async () => {
 	let name = $("#animal-add-name").val();
 	let breed = $("#animal-add-breed").val();
 	let gender = $("#animal-add-gender").val();
-	let color = $("#animal-add-name").val();
-	let description = $("#animal-add-color").val();
+	let color = $("#animal-add-color").val();
+	let description = $("#animal-add-description").val();
 	let uniqueness = $("#animal-add-uniqueness").val();
 	// console.log(name,breed,description,unique)
 
@@ -24,8 +24,8 @@ const animalEditForm = async () => {
 	let name = $("#animal-edit-name").val();
 	let breed = $("#animal-edit-breed").val();
 	let gender = $("#animal-edit-gender").val();
-	let color = $("#animal-edit-name").val();
-	let description = $("#animal-edit-color").val();
+	let color = $("#animal-edit-color").val();
+	let description = $("#animal-edit-description").val();
 	let uniqueness = $("#animal-edit-uniqueness").val();
 
 	let r = await query({

@@ -21,22 +21,23 @@ const makeUserProfile = (o) => `
    <img src="${o.img}" alt="">
 </div>
 </div>
-<div>
-   <h2>${o.name}</h2>
-   <h3>&commat;${o.username}</h3>
-   <div><a href="#page-user-settings">Settings</a></div>
+<div class="profile-detail">
+   <h1 class="user-profile-name">${o.name}</h1>
+   <h3 style="font-weight: 500;"><strong>Username:</strong> &commat;${o.username}</h3>
+   <h3 style="font-weight: 500;"><strong>Email:</strong> ${o.email}</h3>
+   <div style="margin: 0 0.5em 0 0.5em"><div class="form-button" style="margin-top: 1em;"><a href="#page-user-settings">Settings</a></div></div>
 </div>
 `;
 
 
 const makeAnimalProfile = (o) => `
 <div>
-   <h2>${o.name}</h2>
-   <div><strong>Breed</strong> ${o.breed}</div>
-   <div><strong>Gender</strong> ${o.gender}</div>
-   <div><strong>Color</strong> ${o.color}</div>
-   <div><strong>Description</strong> <p>${o.description}</p></div>
-   <div><strong>Uniqueness</strong> <p>${o.uniqueness}</p></div>
+   <h2 class="dog-profile-name">${o.name}</h2>
+   <div class="dog-profile-breed"><strong>Breed:</strong>  ${o.breed}</div>
+   <div class="dog-profile-gender"><strong>Gender:</strong>  ${o.gender}</div>
+   <div class="dog-profile-color"><strong>Color:</strong>  ${o.color}</div>
+   <div class="dog-description"><strong>Description:</strong> <p>${o.description}</p></div>
+   <div class="dog-description"><strong>Uniqueness:</strong> <p>${o.uniqueness}</p></div>
 </div>
 `;
 
@@ -74,7 +75,7 @@ ${FormControlInput({
    name:"name",
    displayname:"Name",
    type:"text",
-   placeholder:"Type The Dog Name",
+   placeholder:"What's the Dog Name?",
    value:o.name
 })}
 ${FormControlInput({
@@ -82,33 +83,36 @@ ${FormControlInput({
    name:"breed",
    displayname:"Breed",
    type:"text",
-   placeholder:"Type The Dog Breed",
+   placeholder:"What's the Dog Breed?",
    value:o.breed
 })}
-<select id="${namespace}-gender" data-role="none">
+<div class="form-control">
+<label class="form-label">Gender</label>
+<select id="${namespace}-gender" data-role="none" class="form-input">
    <option>Female</option>
    <option>Male</option>
 </select>
+</div>
 ${FormControlInput({
    namespace:namespace,
    name:"color",
    displayname:"Color",
    type:"text",
-   placeholder:"Type The Dog Color",
+   placeholder:"What Color is the Dog?",
    value:o.color
 })}
 ${FormControlTextarea({
    namespace:namespace,
    name:"description",
    displayname:"Description",
-   placeholder:"Type The Dog Description",
+   placeholder:"Type the Dog Description",
    value:o.description
 })}
 ${FormControlTextarea({
    namespace:namespace,
    name:"uniqueness",
    displayname:"Uniqueness",
-   placeholder:"Type The Dog Uniqueness",
+   placeholder:"What's the Dog Uniqueness?",
    value:o.uniqueness
 })}
 `;
