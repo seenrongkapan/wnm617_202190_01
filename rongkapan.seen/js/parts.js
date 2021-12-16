@@ -172,9 +172,9 @@ const filterList = (animals,type) => {
 const makeFilterList = (animals) => {
    return `
    <a href="#" data-filter="type" data-value="">All</a>
-   <div>|</div>
+   <div style="color: var(--color-main-dark);">|</div>
    ${filterList(animals,'breed')}
-   <div>|</div>
+   <div style="color: var(--color-main-dark);">|</div>
    ${filterList(animals,'color')}
    `;
 }

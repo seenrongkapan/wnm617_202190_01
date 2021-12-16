@@ -294,9 +294,11 @@ a {
    width: 100%;
    overflow-x: auto;
    gap: 1em;
+   white-space: nowrap;
 }
 .filter-bar a {
    padding: 0;
+   padding-bottom: 0.5em;
 }
 
 
